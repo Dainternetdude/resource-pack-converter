@@ -3,25 +3,28 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 
+/**
+ * this class basically is just the literal user interface and it also contains the starting point for the converter
+ * when the app is being run in gui mode which is the button actionlisteners
+ */
 public class UserInterfaceFrame extends JFrame {
 
     public static final int WIDTH_FRAME = 400;
     public static final int HEIGHT_FRAME = 400;
-    private static final int LATEST_MC_VERSION = 17;
-    private static final int LOWEST_SUPPORTED_MC_VERSION = 7;
+    public static final byte LATEST_MC_VERSION = 17;
+    public static final byte LOWEST_SUPPORTED_MC_VERSION = 7;
 
-    private JPanel panel = new JPanel();
-    private BorderLayout borderLayout = new BorderLayout();
-    private JPanel leftPanel = new JPanel();
-    private GridBagLayout leftGbl = new GridBagLayout();
-    private JPanel rightPanel = new JPanel();
-    private GridBagLayout rightGbl = new GridBagLayout();
-    private GridBagConstraints gbc = new GridBagConstraints();
+    private final JPanel panel = new JPanel();
+    private final BorderLayout borderLayout = new BorderLayout();
+    private final JPanel leftPanel = new JPanel();
+    private final GridBagLayout leftGbl = new GridBagLayout();
+    private final JPanel rightPanel = new JPanel();
+    private final GridBagLayout rightGbl = new GridBagLayout();
+    private final GridBagConstraints gbc = new GridBagConstraints();
 
-    private String sourceVersion = "";
-    private String destinationVersion = "";
+    private byte sourceVersion;
+    private byte destinationVersion;
     private File sourceFile;
-    private File destinationFile;
 
     public UserInterfaceFrame() {
 
@@ -58,7 +61,6 @@ public class UserInterfaceFrame extends JFrame {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         JButton button1 = new JButton("Choose Folder");
-        JButton button2 = new JButton("Choose Folder");
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,24 +72,21 @@ public class UserInterfaceFrame extends JFrame {
                 }
             }
         });
-        button2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == button2) {
-                    int returnValue = fileChooser.showOpenDialog(button2);
-                    if(returnValue == JFileChooser.APPROVE_OPTION) {
-                        destinationFile = fileChooser.getSelectedFile();
-                    }
-                }
-            }
-        });
         gbc.gridy = 2;
         leftPanel.add(button1, gbc);
-        rightPanel.add(button2, gbc);
 
         JButton convertButton = new JButton("Convert!");
         this.add(convertButton, BorderLayout.SOUTH);
-
+        convertButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Textures.setupTextures();
+                DirectoryTrees.setupPaths();
+                sourceVersion = 12;
+                destinationVersion = 13;
+                new Converter().convert(sourceVersion, destinationVersion); //todo use souceFile & destinationFile
+            }
+        });
 
         this.add(panel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
