@@ -7,11 +7,11 @@ public class Directory extends File {
     public Directory() {
     }
 
-    public Directory[] getSubDirectories(byte version) {
+    public Directory[] getSubDirectories(int version) {
         return subDirectories[version];
     }
 
-    protected void setSubDirectories(Directory[] subDirectories, byte version) {
+    protected void setSubDirectories(Directory[] subDirectories, int version) {
         if (subDirectories != null) {
             this.subDirectories[version] = subDirectories.clone();
             this.hasSubDirectories[version] = true;
@@ -25,7 +25,7 @@ public class Directory extends File {
         }
     }
 
-    public boolean getHasSubDirectories(byte version) {
+    public boolean getHasSubDirectories(int version) {
         return this.hasSubDirectories[version];
     }
 
@@ -33,7 +33,7 @@ public class Directory extends File {
         return textures[version].clone();
     }
 
-    public void setTextures(Texture[] textures, byte version) {
+    public void setTextures(Texture[] textures, int version) {
         if (textures != null) {
             this.textures[version] = textures.clone();
 

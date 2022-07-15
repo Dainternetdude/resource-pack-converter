@@ -1,4 +1,4 @@
-import com.sun.istack.internal.Nullable;
+import org.jetbrains.annotations.*;
 
 import java.io.File;
 
@@ -14,7 +14,7 @@ public class Converter {
     public void convert(byte sourceVersion, byte destinationVersion) { //todo take path to file
         this.sourceVersion = sourceVersion;
         this.destinationVersion = destinationVersion;
-        convert(DirectoryTrees.TOP_LEVEL_DIRECTORIES);
+        convert(Version.TOP_LEVEL_DIRECTORIES);
     }
     public void convert(@Nullable Directory dir) {
 

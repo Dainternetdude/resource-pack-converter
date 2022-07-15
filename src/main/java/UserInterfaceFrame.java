@@ -80,8 +80,7 @@ public class UserInterfaceFrame extends JFrame {
         convertButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Textures.setupTextures();
-                DirectoryTrees.setupPaths();
+                Version.setupVersions();
                 sourceVersion = 12;
                 destinationVersion = 13;
                 new Converter().convert(sourceVersion, destinationVersion); //todo use souceFile & destinationFile

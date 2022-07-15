@@ -7,7 +7,7 @@ public class Start {
         if (args.length < 1 || args[0].equals("nogui")) {
             new UserInterfaceFrame();
         } else {
-            //run in no gui mode, take version with args
+            //TODO: run in no gui mode, take version with args
         }
     }
 }

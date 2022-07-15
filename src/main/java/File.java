@@ -14,27 +14,27 @@ public class File {
     public File() {
     }
 
-    public String getName(byte version) {
+    public String getName(int version) {
         return this.name[version];
     }
 
-    public void setName(String name, byte version) {
+    public void setName(String name, int version) {
         this.name[version] = name;
     }
 
-    public String getPath(byte version) {
+    public String getPath(int version) {
         if (this.getParent(version) != null) {
             return getParent(version).getPath(version) + this.getName(version);
         } else {
-            return DirectoryTrees.basePath + this.getName(version);
+            return Version.BASE_PATH + this.getName(version);
         }
     }
 
-    protected void setParent(Directory parentDir, byte version) {
+    protected void setParent(Directory parentDir, int version) {
         this.parent[version] = parentDir;
     }
 
-    protected Directory getParent(byte version) {
+    protected Directory getParent(int version) {
         return this.parent[version];
     }
 }
