@@ -31,7 +31,7 @@ public class Converter {
                 System.out.println("ERROR!!!! of renaming file \"" + texture.getName(sourceVersion) + "\"");
             }
         }
-        if (dir.getHasSubDirectories(sourceVersion)) {
+        if (dir.hasSubDirectories(sourceVersion)) {
             Directory[] subDirectories = dir.getSubDirectories(sourceVersion);
             //for each subdirectory in dir
             for (Directory subDir : subDirectories) {

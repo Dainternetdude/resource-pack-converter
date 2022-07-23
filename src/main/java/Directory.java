@@ -1,39 +1,60 @@
+import java.util.*;
+
 public class Directory extends File {
 
-    private final Directory[][] subDirectories = new Directory[UserInterfaceFrame.LATEST_MC_VERSION + 1][];
-    private final boolean[] hasSubDirectories = new boolean[UserInterfaceFrame.LATEST_MC_VERSION + 1];
-    private final Texture[][] textures = new Texture[UserInterfaceFrame.LATEST_MC_VERSION + 1][];
+    private final ArrayList<Directory>[] subDirectories = (ArrayList<Directory>[]) new ArrayList[UserInterfaceFrame.LATEST_MC_VERSION + 1];
+    private final ArrayList<Texture>[] textures = (ArrayList<Texture>[]) new ArrayList[UserInterfaceFrame.LATEST_MC_VERSION + 1];
 
     public Directory() {
+        for (ArrayList<Directory> subDirectoryArray : subDirectories) {
+            subDirectoryArray = new ArrayList<>();
+        }
+        for (ArrayList<Texture> textureArray : textures) {
+            textureArray = new ArrayList<>();
+        }
     }
 
-    public Directory[] getSubDirectories(int version) {
+    public ArrayList<Directory> getSubDirectories(int version) {
         return subDirectories[version];
     }
+    
+    public void addSubDirectory(Directory directory, int version) {
+        if (directory == null)
+            throw new NullPointerException("cannot add directory as it is null!");
+        else
+            subDirectories[version].add(directory);
+    }
 
-    protected void setSubDirectories(Directory[] subDirectories, int version) {
+    @Deprecated
+    private void setSubDirectories(Directory[] subDirectories, int version) {
         if (subDirectories != null) {
             this.subDirectories[version] = subDirectories.clone();
-            this.hasSubDirectories[version] = true;
 
             for (Directory dir : this.subDirectories[version]) {
                 dir.setParent(this, version);
             }
         } else {
             this.subDirectories[version] = null;
-            this.hasSubDirectories[version] = false;
         }
     }
 
-    public boolean getHasSubDirectories(int version) {
-        return this.hasSubDirectories[version];
+    public boolean hasSubDirectories(int version) {
+        return !this.subDirectories[version].isEmpty();
     }
 
-    public Texture[] getTextures(byte version) {
+    public ArrayList<Texture> getTextures(byte version) {
         return textures[version].clone();
     }
 
-    public void setTextures(Texture[] textures, int version) {
+    public void addTexture(Texture texture, int version) {
+        if (texture == null)
+            throw new NullPointerException("cannot add texture as it is null!");
+        else
+            textures[version].add(texture);
+    }
+    
+    @Deprecated
+    private void setTextures(Texture[] textures, int version) {
         if (textures != null) {
             this.textures[version] = textures.clone();
 

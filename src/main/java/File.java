@@ -31,10 +31,15 @@ public class File {
     }
 
     protected void setParent(Directory parentDir, int version) {
-        this.parent[version] = parentDir;
+        if (parentDir == null)
+            throw new NullPointerException("cannot set parent directory to null!");
+        else
+            this.parent[version] = parentDir;
     }
 
     protected Directory getParent(int version) {
+        if (this.parent[version] == null)
+            System.out.printf("Warning: parent of %s is null!%n", this.getName(version));
         return this.parent[version];
     }
 }

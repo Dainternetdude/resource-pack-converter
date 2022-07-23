@@ -4,7 +4,8 @@ public class One12 extends Version {
 	
 	public One12() {
 		setupTextures();
-		setupDirectories();
+		setupDirectoryStructure();
+		setupDirectoryContents();
 	}
 	
 	protected void setupTextures() {
@@ -1213,7 +1214,7 @@ public class One12 extends Version {
 		DIR_PARTICLES.setName("particles", version);
 	}
 	
-	protected void setupDirectories() {
+	protected void setupDirectoryStructure() {
 		//TODO: super.setupDirectories();
 		
 		// setting names
@@ -1272,1379 +1273,1351 @@ public class One12 extends Version {
 		DIR_PARTICLES.setName("particle", version);
 		
 		// setting subdirectories
-		DIR_ENTITIES.setSubDirectories(new Directory[]{
-				DIR_ARMORSTAND,
-				DIR_BANNER,
-				DIR_BEARS,
-				DIR_BEDS,
-				DIR_BOATS,
-				DIR_CATS,
-				DIR_CHESTS,
-				DIR_CONDUIT,
-				DIR_COWS,
-				DIR_CREEPER,
-				DIR_END_CRYSTAL,
-				DIR_ENDER_DRAGON,
-				DIR_ENDERMAN,
-				DIR_FISH,
-				DIR_GHAST,
-				DIR_HORSES,
-				DIR_ILLAGERS,
-				DIR_LLAMAS,
-				DIR_PARROTS,
-				DIR_PIG,
-				DIR_PROJECTILES,
-				DIR_RABBITS,
-				DIR_SHEEP,
-				DIR_SHIELD,
-				DIR_SHULKERS,
-				DIR_SKELETONS,
-				DIR_SLIMES,
-				DIR_SPIDERS,
-				DIR_TURTLE,
-				DIR_VILLAGERS,
-				DIR_WITHER,
-				DIR_WOLVES,
-				DIR_ZOMBIES,
-				DIR_ZOMBIE_VILLAGERS
-		}, version);
-		DIR_HORSES.setSubDirectories(new Directory[]{
-				DIR_HORSE_ARMOR
-		}, version);
-		DIR_LLAMAS.setSubDirectories(new Directory[]{
-				DIR_LLAMA_DECOR
-		}, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ARMORSTAND, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BANNER, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BEARS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BEDS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BOATS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CATS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CHESTS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CONDUIT, version);
+		DIR_ENTITIES.addSubDirectory(DIR_COWS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CREEPER, version);
+		DIR_ENTITIES.addSubDirectory(DIR_END_CRYSTAL, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ENDER_DRAGON, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ENDERMAN, version);
+		DIR_ENTITIES.addSubDirectory(DIR_FISH, version);
+		DIR_ENTITIES.addSubDirectory(DIR_GHAST, version);
+		DIR_ENTITIES.addSubDirectory(DIR_HORSES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ILLAGERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_LLAMAS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_PARROTS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_PIG, version);
+		DIR_ENTITIES.addSubDirectory(DIR_PROJECTILES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_RABBITS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SHEEP, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SHIELD, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SHULKERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SKELETONS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SLIMES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SPIDERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_TURTLE, version);
+		DIR_ENTITIES.addSubDirectory(DIR_VILLAGERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_WITHER, version);
+		DIR_ENTITIES.addSubDirectory(DIR_WOLVES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ZOMBIES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ZOMBIE_VILLAGERS, version);
 		
-		DIR_GUIS.setSubDirectories(new Directory[]{
-				DIR_ADVANCEMENTS,
-				DIR_CONTAINERS,
-				DIR_PRESETS,
-				DIR_TITLE
-		}, version);
-		DIR_ADVANCEMENTS.setSubDirectories(new Directory[]{
-				DIR_ADVANCEMENT_BACKGROUNDS
-		}, version);
-		DIR_CONTAINERS.setSubDirectories(new Directory[]{
-				DIR_CONTAINER_CREATIVE_INVENTORY
-		}, version);
-		DIR_TITLE.setSubDirectories(new Directory[]{
-				DIR_TITLE_BACKGROUND
-		}, version);
+		DIR_HORSES.addSubDirectory(DIR_HORSE_ARMOR, version);
+		DIR_LLAMAS.addSubDirectory(DIR_LLAMA_DECOR, version);
 		
-		// setting textures
-		setupDirectoryContents();
+		DIR_GUIS.addSubDirectory(DIR_ADVANCEMENTS, version);
+		DIR_GUIS.addSubDirectory(DIR_CONTAINERS, version);
+		DIR_GUIS.addSubDirectory(DIR_PRESETS, version);
+		DIR_GUIS.addSubDirectory(DIR_TITLE, version);
+		
+		DIR_ADVANCEMENTS.addSubDirectory(DIR_ADVANCEMENT_BACKGROUNDS, version);
+		DIR_CONTAINERS.addSubDirectory(DIR_CONTAINER_CREATIVE_INVENTORY, version);
+		DIR_TITLE.addSubDirectory(DIR_TITLE_BACKGROUND, version);
 	}
 	
 	protected void setupDirectoryContents() {
-		DIR_BLOCKS.setTextures(new Texture[]{
-				Version.ACACIA_DOOR_BOTTOM,
-				Version.ACACIA_DOOR_TOP,
-				Version.ACACIA_LEAVES,
-				Version.ACACIA_LOG,
-				Version.ACACIA_LOG_TOP,
-				Version.ACACIA_PLANKS,
-				Version.ACACIA_SAPLING,
-				Version.ACACIA_TRAPDOOR,
-				Version.ACTIVATOR_RAIL,
-				Version.ACTIVATOR_RAIL_ON,
-				Version.ALLIUM,
-				Version.ANDESITE,
-				Version.ANVIL,
-				Version.ANVIL_TOP,
-				Version.ATTACHED_MELON_STEM,
-				Version.ATTACHED_PUMPKIN_STEM,
-				Version.AZURE_BLUET,
-				Version.BEACON,
-				Version.BEDROCK,
-				Version.BEETROOTS_STAGE0,
-				Version.BEETROOTS_STAGE1,
-				Version.BEETROOTS_STAGE2,
-				Version.BEETROOTS_STAGE3,
-				Version.BIRCH_DOOR_BOTTOM,
-				Version.BIRCH_DOOR_TOP,
-				Version.BIRCH_LEAVES,
-				Version.BIRCH_LOG,
-				Version.BIRCH_LOG_TOP,
-				Version.BIRCH_PLANKS,
-				Version.BIRCH_SAPLING,
-				Version.BIRCH_TRAPDOOR,
-				Version.BLACK_CONCRETE,
-				Version.BLACK_CONCRETE_POWDER,
-				Version.BLACK_GLAZED_TERRACOTTA,
-				Version.BLACK_SHULKER_BOX,
-				Version.BLACK_STAINED_GLASS,
-				Version.BLACK_STAINED_GLASS_PANE_TOP,
-				Version.BLACK_TERRACOTTA,
-				Version.BLACK_WOOL,
-				Version.BLUE_CONCRETE,
-				Version.BLUE_CONCRETE_POWDER,
-				Version.BLUE_GLAZED_TERRACOTTA,
-				Version.BLUE_ICE,
-				Version.BLUE_ORCHID,
-				Version.BLUE_SHULKER_BOX,
-				Version.BLUE_STAINED_GLASS,
-				Version.BLUE_STAINED_GLASS_PANE_TOP,
-				Version.BLUE_TERRACOTTA,
-				Version.BLUE_WOOL,
-				Version.BONE_BLOCK_SIDE,
-				Version.BONE_BLOCK_TOP,
-				Version.BOOKSHELF,
-				Version.BRAIN_CORAL,
-				Version.BRAIN_CORAL_BLOCK,
-				Version.BRAIN_CORAL_FAN,
-				Version.BREWING_STAND,
-				Version.BREWING_STAND_BASE,
-				Version.BRICKS,
-				Version.BROWN_CONCRETE,
-				Version.BROWN_CONCRETE_POWDER,
-				Version.BROWN_GLAZED_TERRACOTTA,
-				Version.BROWN_MUSHROOM,
-				Version.BROWN_MUSHROOM_BLOCK,
-				Version.BROWN_SHULKER_BOX,
-				Version.BROWN_STAINED_GLASS,
-				Version.BROWN_STAINED_GLASS_PANE_TOP,
-				Version.BROWN_TERRACOTTA,
-				Version.BROWN_WOOL,
-				Version.BUBBLE_CORAL,
-				Version.BUBBLE_CORAL_BLOCK,
-				Version.BUBBLE_CORAL_FAN,
-				Version.CACTUS_BOTTOM,
-				Version.CACTUS_SIDE,
-				Version.CACTUS_TOP,
-				Version.CAKE_BOTTOM,
-				Version.CAKE_INNER,
-				Version.CAKE_SIDE,
-				Version.CAKE_TOP,
-				Version.CARROTS_STAGE0,
-				Version.CARROTS_STAGE1,
-				Version.CARROTS_STAGE2,
-				Version.CARROTS_STAGE3,
-				Version.CARVED_PUMPKIN,
-				Version.CAULDRON_BOTTOM,
-				Version.CAULDRON_INNER,
-				Version.CAULDRON_SIDE,
-				Version.CAULDRON_TOP,
-				Version.CHAIN_COMMAND_BLOCK_BACK,
-				Version.CHAIN_COMMAND_BLOCK_CONDITIONAL,
-				Version.CHAIN_COMMAND_BLOCK_FRONT,
-				Version.CHAIN_COMMAND_BLOCK_SIDE,
-				Version.CHIPPED_ANVIL_TOP,
-				Version.CHISELED_QUARTZ_BLOCK,
-				Version.CHISELED_QUARTZ_BLOCK_TOP,
-				Version.CHISELED_RED_SANDSTONE,
-				Version.CHISELED_SANDSTONE,
-				Version.CHISELED_STONE_BRICKS,
-				Version.CHORUS_FLOWER,
-				Version.CHORUS_FLOWER_DEAD,
-				Version.CHORUS_PLANT,
-				Version.CLAY,
-				Version.COAL_BLOCK,
-				Version.COAL_ORE,
-				Version.COARSE_DIRT,
-				Version.COBBLESTONE,
-				Version.COBWEB,
-				Version.COCOA_STAGE0,
-				Version.COCOA_STAGE1,
-				Version.COCOA_STAGE2,
-				Version.COMMAND_BLOCK_BACK,
-				Version.COMMAND_BLOCK_CONDITIONAL,
-				Version.COMMAND_BLOCK_FRONT,
-				Version.COMMAND_BLOCK_SIDE,
-				Version.COMPARATOR,
-				Version.COMPARATOR_ON,
-				Version.CONDUIT,
-				Version.CRACKED_STONE_BRICKS,
-				Version.CRAFTING_TABLE_FRONT,
-				Version.CRAFTING_TABLE_SIDE,
-				Version.CRAFTING_TABLE_TOP,
-				Version.CUT_RED_SANDSTONE,
-				Version.CUT_SANDSTONE,
-				Version.CYAN_CONCRETE,
-				Version.CYAN_CONCRETE_POWDER,
-				Version.CYAN_GLAZED_TERRACOTTA,
-				Version.CYAN_SHULKER_BOX,
-				Version.CYAN_STAINED_GLASS,
-				Version.CYAN_STAINED_GLASS_PANE_TOP,
-				Version.CYAN_TERRACOTTA,
-				Version.CYAN_WOOL,
-				Version.DAMAGED_ANVIL_TOP,
-				Version.DANDELION,
-				Version.DARK_OAK_DOOR_BOTTOM,
-				Version.DARK_OAK_DOOR_TOP,
-				Version.DARK_OAK_LEAVES,
-				Version.DARK_OAK_LOG,
-				Version.DARK_OAK_LOG_TOP,
-				Version.DARK_OAK_PLANKS,
-				Version.DARK_OAK_SAPLING,
-				Version.DARK_OAK_TRAPDOOR,
-				Version.DARK_PRISMARINE,
-				Version.DAYLIGHT_DETECTOR_INVERTED_TOP,
-				Version.DAYLIGHT_DETECTOR_SIDE,
-				Version.DAYLIGHT_DETECTOR_TOP,
-				Version.DEAD_BRAIN_CORAL_BLOCK,
-				Version.DEAD_BRAIN_CORAL_FAN,
-				Version.DEAD_BUBBLE_CORAL_BLOCK,
-				Version.DEAD_BUBBLE_CORAL_FAN,
-				Version.DEAD_BUSH,
-				Version.DEAD_FIRE_CORAL_BLOCK,
-				Version.DEAD_FIRE_CORAL_FAN,
-				Version.DEAD_HORN_CORAL_BLOCK,
-				Version.DEAD_HORN_CORAL_FAN,
-				Version.DEAD_TUBE_CORAL_BLOCK,
-				Version.DEAD_TUBE_CORAL_FAN,
-				Version.DEBUG,
-				Version.DEBUG2,
-				Version.DESTROY_STAGE_0,
-				Version.DESTROY_STAGE_1,
-				Version.DESTROY_STAGE_2,
-				Version.DESTROY_STAGE_3,
-				Version.DESTROY_STAGE_4,
-				Version.DESTROY_STAGE_5,
-				Version.DESTROY_STAGE_6,
-				Version.DESTROY_STAGE_7,
-				Version.DESTROY_STAGE_8,
-				Version.DESTROY_STAGE_9,
-				Version.DETECTOR_RAIL,
-				Version.DETECTOR_RAIL_ON,
-				Version.DIAMOND_BLOCK,
-				Version.DIAMOND_ORE,
-				Version.DIORITE,
-				Version.DIRT,
-				Version.DISPENSER_FRONT,
-				Version.DISPENSER_FRONT_VERTICAL,
-				Version.DRAGON_EGG,
-				Version.DRIED_KELP_BOTTOM,
-				Version.DRIED_KELP_SIDE,
-				Version.DRIED_KELP_TOP,
-				Version.DROPPER_FRONT,
-				Version.DROPPER_FRONT_VERTICAL,
-				Version.EMERALD_BLOCK,
-				Version.EMERALD_ORE,
-				Version.ENCHANTING_TABLE_BOTTOM,
-				Version.ENCHANTING_TABLE_SIDE,
-				Version.ENCHANTING_TABLE_TOP,
-				Version.END_PORTAL_FRAME_EYE,
-				Version.END_PORTAL_FRAME_SIDE,
-				Version.END_PORTAL_FRAME_TOP,
-				Version.END_ROD,
-				Version.END_STONE,
-				Version.END_STONE_BRICKS,
-				Version.FARMLAND,
-				Version.FARMLAND_MOIST,
-				Version.FERN,
-				Version.FIRE_0,
-				Version.FIRE_1,
-				Version.FIRE_CORAL,
-				Version.FIRE_CORAL_BLOCK,
-				Version.FIRE_CORAL_FAN,
-				Version.FLOWER_POT,
-				Version.FROSTED_ICE_0,
-				Version.FROSTED_ICE_1,
-				Version.FROSTED_ICE_2,
-				Version.FROSTED_ICE_3,
-				Version.FURNACE_FRONT,
-				Version.FURNACE_FRONT_ON,
-				Version.FURNACE_SIDE,
-				Version.FURNACE_TOP,
-				Version.GLASS,
-				Version.GLASS_PANE_TOP,
-				Version.GLOWSTONE,
-				Version.GOLD_BLOCK,
-				Version.GOLD_ORE,
-				Version.GRANITE,
-				Version.GRASS,
-				Version.GRASS_BLOCK_SIDE,
-				Version.GRASS_BLOCK_SIDE_OVERLAY,
-				Version.GRASS_BLOCK_SNOW,
-				Version.GRASS_BLOCK_TOP,
-				Version.GRASS_PATH_SIDE,
-				Version.GRASS_PATH_TOP,
-				Version.GRAVEL,
-				Version.GRAY_CONCRETE,
-				Version.GRAY_CONCRETE_POWDER,
-				Version.GRAY_GLAZED_TERRACOTTA,
-				Version.GRAY_SHULKER_BOX,
-				Version.GRAY_STAINED_GLASS,
-				Version.GRAY_STAINED_GLASS_PANE_TOP,
-				Version.GRAY_TERRACOTTA,
-				Version.GRAY_WOOL,
-				Version.GREEN_CONCRETE,
-				Version.GREEN_CONCRETE_POWDER,
-				Version.GREEN_GLAZED_TERRACOTTA,
-				Version.GREEN_SHULKER_BOX,
-				Version.GREEN_STAINED_GLASS,
-				Version.GREEN_STAINED_GLASS_PANE_TOP,
-				Version.GREEN_TERRACOTTA,
-				Version.GREEN_WOOL,
-				Version.HAY_BLOCK_SIDE,
-				Version.HAY_BLOCK_TOP,
-				Version.HOPPER_INSIDE,
-				Version.HOPPER_OUTSIDE,
-				Version.HOPPER_TOP,
-				Version.HORN_CORAL,
-				Version.HORN_CORAL_BLOCK,
-				Version.HORN_CORAL_FAN,
-				Version.ICE,
-				Version.IRON_BARS,
-				Version.IRON_BLOCK,
-				Version.IRON_DOOR_BOTTOM,
-				Version.IRON_DOOR_TOP,
-				Version.IRON_ORE,
-				Version.IRON_TRAPDOOR,
-				Version.ITEM_FRAME,
-				Version.JACK_O_LANTERN,
-				Version.JUKEBOX_SIDE,
-				Version.JUKEBOX_TOP,
-				Version.JUNGLE_DOOR_BOTTOM,
-				Version.JUNGLE_DOOR_TOP,
-				Version.JUNGLE_LEAVES,
-				Version.JUNGLE_LOG,
-				Version.JUNGLE_LOG_TOP,
-				Version.JUNGLE_PLANKS,
-				Version.JUNGLE_SAPLING,
-				Version.JUNGLE_TRAPDOOR,
-				Version.KELP,
-				Version.KELP_PLANT,
-				Version.LADDER,
-				Version.LAPIS_BLOCK,
-				Version.LAPIS_ORE,
-				Version.LARGE_FERN_BOTTOM,
-				Version.LARGE_FERN_TOP,
-				Version.LAVA_FLOW,
-				Version.LAVA_STILL,
-				Version.LEVER,
-				Version.LIGHT_BLUE_CONCRETE,
-				Version.LIGHT_BLUE_CONCRETE_POWDER,
-				Version.LIGHT_BLUE_GLAZED_TERRACOTTA,
-				Version.LIGHT_BLUE_SHULKER_BOX,
-				Version.LIGHT_BLUE_STAINED_GLASS,
-				Version.LIGHT_BLUE_STAINED_GLASS_PANE_TOP,
-				Version.LIGHT_BLUE_TERRACOTTA,
-				Version.LIGHT_BLUE_WOOL,
-				Version.LIGHT_GRAY_CONCRETE,
-				Version.LIGHT_GRAY_CONCRETE_POWDER,
-				Version.LIGHT_GRAY_GLAZED_TERRACOTTA,
-				Version.LIGHT_GRAY_SHULKER_BOX,
-				Version.LIGHT_GRAY_STAINED_GLASS,
-				Version.LIGHT_GRAY_STAINED_GLASS_PANE_TOP,
-				Version.LIGHT_GRAY_TERRACOTTA,
-				Version.LIGHT_GRAY_WOOL,
-				Version.LILAC_BOTTOM,
-				Version.LILAC_TOP,
-				Version.LILY_PAD,
-				Version.LIME_CONCRETE,
-				Version.LIME_CONCRETE_POWDER,
-				Version.LIME_GLAZED_TERRACOTTA,
-				Version.LIME_SHULKER_BOX,
-				Version.LIME_STAINED_GLASS,
-				Version.LIME_STAINED_GLASS_PANE_TOP,
-				Version.LIME_TERRACOTTA,
-				Version.LIME_WOOL,
-				Version.MAGENTA_CONCRETE,
-				Version.MAGENTA_CONCRETE_POWDER,
-				Version.MAGENTA_GLAZED_TERRACOTTA,
-				Version.MAGENTA_SHULKER_BOX,
-				Version.MAGENTA_STAINED_GLASS,
-				Version.MAGENTA_STAINED_GLASS_PANE_TOP,
-				Version.MAGENTA_TERRACOTTA,
-				Version.MAGENTA_WOOL,
-				Version.MAGMA,
-				Version.MELON_SIDE,
-				Version.MELON_STEM,
-				Version.MELON_TOP,
-				Version.MOSSY_COBBLESTONE,
-				Version.MOSSY_STONE_BRICKS,
-				Version.MUSHROOM_BLOCK_INSIDE,
-				Version.MUSHROOM_STEM,
-				Version.MYCELIUM_SIDE,
-				Version.MYCELIUM_TOP,
-				Version.NETHER_BRICKS,
-				Version.NETHER_PORTAL,
-				Version.NETHER_QUARTZ_ORE,
-				Version.NETHER_WART_BLOCK,
-				Version.NETHER_WART_STAGE0,
-				Version.NETHER_WART_STAGE1,
-				Version.NETHER_WART_STAGE2,
-				Version.NETHERRACK,
-				Version.NOTE_BLOCK,
-				Version.OAK_DOOR_BOTTOM,
-				Version.OAK_DOOR_TOP,
-				Version.OAK_LEAVES,
-				Version.OAK_LOG,
-				Version.OAK_LOG_TOP,
-				Version.OAK_PLANKS,
-				Version.OAK_SAPLING,
-				Version.OAK_TRAPDOOR,
-				Version.OBSERVER_BACK,
-				Version.OBSERVER_BACK_ON,
-				Version.OBSERVER_FRONT,
-				Version.OBSERVER_SIDE,
-				Version.OBSERVER_TOP,
-				Version.OBSIDIAN,
-				Version.ORANGE_CONCRETE,
-				Version.ORANGE_CONCRETE_POWDER,
-				Version.ORANGE_GLAZED_TERRACOTTA,
-				Version.ORANGE_SHULKER_BOX,
-				Version.ORANGE_STAINED_GLASS,
-				Version.ORANGE_STAINED_GLASS_PANE_TOP,
-				Version.ORANGE_TERRACOTTA,
-				Version.ORANGE_TULIP,
-				Version.ORANGE_WOOL,
-				Version.OXEYE_DAISY,
-				Version.PACKED_ICE,
-				Version.PEONY_BOTTOM,
-				Version.PEONY_TOP,
-				Version.PINK_CONCRETE,
-				Version.PINK_CONCRETE_POWDER,
-				Version.PINK_GLAZED_TERRACOTTA,
-				Version.PINK_SHULKER_BOX,
-				Version.PINK_STAINED_GLASS,
-				Version.PINK_STAINED_GLASS_PANE_TOP,
-				Version.PINK_TERRACOTTA,
-				Version.PINK_TULIP,
-				Version.PINK_WOOL,
-				Version.PISTON_BOTTOM,
-				Version.PISTON_INNER,
-				Version.PISTON_SIDE,
-				Version.PISTON_TOP,
-				Version.PISTON_TOP_STICKY,
-				Version.PODZOL_SIDE,
-				Version.PODZOL_TOP,
-				Version.POLISHED_ANDESITE,
-				Version.POLISHED_DIORITE,
-				Version.POLISHED_GRANITE,
-				Version.POPPY,
-				Version.POTATOES_STAGE0,
-				Version.POTATOES_STAGE1,
-				Version.POTATOES_STAGE2,
-				Version.POTATOES_STAGE3,
-				Version.POWERED_RAIL,
-				Version.POWERED_RAIL_ON,
-				Version.PRISMARINE,
-				Version.PRISMARINE_BRICKS,
-				Version.PUMPKIN_SIDE,
-				Version.PUMPKIN_STEM,
-				Version.PUMPKIN_TOP,
-				Version.PURPLE_CONCRETE,
-				Version.PURPLE_CONCRETE_POWDER,
-				Version.PURPLE_GLAZED_TERRACOTTA,
-				Version.PURPLE_SHULKER_BOX,
-				Version.PURPLE_STAINED_GLASS,
-				Version.PURPLE_STAINED_GLASS_PANE_TOP,
-				Version.PURPLE_TERRACOTTA,
-				Version.PURPLE_WOOL,
-				Version.PURPUR_BLOCK,
-				Version.PURPUR_PILLAR,
-				Version.PURPUR_PILLAR_TOP,
-				Version.QUARTZ_BLOCK_BOTTOM,
-				Version.QUARTZ_BLOCK_SIDE,
-				Version.QUARTZ_BLOCK_TOP,
-				Version.QUARTZ_PILLAR,
-				Version.QUARTZ_PILLAR_TOP,
-				Version.RAIL,
-				Version.RAIL_CORNER,
-				Version.RED_CONCRETE,
-				Version.RED_CONCRETE_POWDER,
-				Version.RED_GLAZED_TERRACOTTA,
-				Version.RED_MUSHROOM,
-				Version.RED_MUSHROOM_BLOCK,
-				Version.RED_NETHER_BRICKS,
-				Version.RED_SAND,
-				Version.RED_SANDSTONE,
-				Version.RED_SANDSTONE_BOTTOM,
-				Version.RED_SANDSTONE_TOP,
-				Version.RED_SHULKER_BOX,
-				Version.RED_STAINED_GLASS,
-				Version.RED_STAINED_GLASS_PANE_TOP,
-				Version.RED_TERRACOTTA,
-				Version.RED_TULIP,
-				Version.RED_WOOL,
-				Version.REDSTONE_BLOCK,
-				Version.REDSTONE_DUST_DOT,
-				Version.REDSTONE_DUST_LINE0,
-				Version.REDSTONE_DUST_LINE1,
-				Version.REDSTONE_DUST_OVERLAY,
-				Version.REDSTONE_LAMP,
-				Version.REDSTONE_LAMP_ON,
-				Version.REDSTONE_ORE,
-				Version.REDSTONE_TORCH,
-				Version.REDSTONE_TORCH_OFF,
-				Version.REPEATER,
-				Version.REPEATER_ON,
-				Version.REPEATING_COMMAND_BLOCK_BACK,
-				Version.REPEATING_COMMAND_BLOCK_CONDITIONAL,
-				Version.REPEATING_COMMAND_BLOCK_FRONT,
-				Version.REPEATING_COMMAND_BLOCK_SIDE,
-				Version.ROSE_BUSH_BOTTOM,
-				Version.ROSE_BUSH_TOP,
-				Version.SAND,
-				Version.SANDSTONE,
-				Version.SANDSTONE_BOTTOM,
-				Version.SANDSTONE_TOP,
-				Version.SEA_LANTERN,
-				Version.SEA_PICKLE,
-				Version.SEAGRASS,
-				Version.SHULKER_BOX,
-				Version.SLIME_BLOCK,
-				Version.SNOW,
-				Version.SOUL_SAND,
-				Version.SPAWNER,
-				Version.SPONGE,
-				Version.SPRUCE_DOOR_BOTTOM,
-				Version.SPRUCE_DOOR_TOP,
-				Version.SPRUCE_LEAVES,
-				Version.SPRUCE_LOG,
-				Version.SPRUCE_LOG_TOP,
-				Version.SPRUCE_PLANKS,
-				Version.SPRUCE_SAPLING,
-				Version.SPRUCE_TRAPDOOR,
-				Version.STONE,
-				Version.STONE_BRICKS,
-				Version.STONE_SLAB_SIDE,
-				Version.STONE_SLAB_TOP,
-				Version.STRIPPED_ACACIA_LOG,
-				Version.STRIPPED_ACACIA_LOG_TOP,
-				Version.STRIPPED_BIRCH_LOG,
-				Version.STRIPPED_BIRCH_LOG_TOP,
-				Version.STRIPPED_DARK_OAK_LOG,
-				Version.STRIPPED_DARK_OAK_LOG_TOP,
-				Version.STRIPPED_JUNGLE_LOG,
-				Version.STRIPPED_JUNGLE_LOG_TOP,
-				Version.STRIPPED_OAK_LOG,
-				Version.STRIPPED_OAK_LOG_TOP,
-				Version.STRIPPED_SPRUCE_LOG,
-				Version.STRIPPED_SPRUCE_LOG_TOP,
-				Version.STRUCTURE_BLOCK,
-				Version.STRUCTURE_BLOCK_CORNER,
-				Version.STRUCTURE_BLOCK_DATA,
-				Version.STRUCTURE_BLOCK_LOAD,
-				Version.STRUCTURE_BLOCK_SAVE,
-				Version.SUGAR_CANE,
-				Version.SUNFLOWER_BACK,
-				Version.SUNFLOWER_BOTTOM,
-				Version.SUNFLOWER_FRONT,
-				Version.SUNFLOWER_TOP,
-				Version.TALL_GRASS_BOTTOM,
-				Version.TALL_GRASS_TOP,
-				Version.TALL_SEAGRASS_BOTTOM,
-				Version.TALL_SEAGRASS_TOP,
-				Version.TERRACOTTA,
-				Version.TNT_BOTTOM,
-				Version.TNT_SIDE,
-				Version.TNT_TOP,
-				Version.TORCH,
-				Version.TRIPWIRE,
-				Version.TRIPWIRE_HOOK,
-				Version.TUBE_CORAL,
-				Version.TUBE_CORAL_BLOCK,
-				Version.TUBE_CORAL_FAN,
-				Version.TURTLE_EGG,
-				Version.TURTLE_EGG_SLIGHTLY_CRACKED,
-				Version.TURTLE_EGG_VERY_CRACKED,
-				Version.VINE,
-				Version.WATER_FLOW,
-				Version.WATER_OVERLAY,
-				Version.WATER_STILL,
-				Version.WET_SPONGE,
-				Version.WHEAT_STAGE0,
-				Version.WHEAT_STAGE1,
-				Version.WHEAT_STAGE2,
-				Version.WHEAT_STAGE3,
-				Version.WHEAT_STAGE4,
-				Version.WHEAT_STAGE5,
-				Version.WHEAT_STAGE6,
-				Version.WHEAT_STAGE7,
-				Version.WHITE_CONCRETE,
-				Version.WHITE_CONCRETE_POWDER,
-				Version.WHITE_GLAZED_TERRACOTTA,
-				Version.WHITE_SHULKER_BOX,
-				Version.WHITE_STAINED_GLASS,
-				Version.WHITE_STAINED_GLASS_PANE_TOP,
-				Version.WHITE_TERRACOTTA,
-				Version.WHITE_TULIP,
-				Version.WHITE_WOOL,
-				Version.YELLOW_CONCRETE,
-				Version.YELLOW_CONCRETE_POWDER,
-				Version.YELLOW_GLAZED_TERRACOTTA,
-				Version.YELLOW_SHULKER_BOX,
-				Version.YELLOW_STAINED_GLASS,
-				Version.YELLOW_STAINED_GLASS_PANE_TOP,
-				Version.YELLOW_TERRACOTTA,
-				Version.YELLOW_WOOL,
-		}, version);
-		DIR_COLORMAPS.setTextures(new Texture[]{
-				Version.FOLIAGE,
-				Version.GRASS,
-		}, version);
-		DIR_EFFECTS.setTextures(new Texture[]{
-				Version.DITHER,
-		}, version);
-		DIR_ENTITIES.setTextures(new Texture[]{
-				Version.ALEX,
-				Version.ARMORSTAND_WOOD,
-				Version.ARROW,
-				Version.BANNER_BASE,
-				Version.BANNER_BORDER,
-				Version.BANNER_BRICKS,
-				Version.BANNER_CIRCLE,
-				Version.BANNER_CREEPER,
-				Version.BANNER_CROSS,
-				Version.BANNER_CURLY_BORDER,
-				Version.BANNER_DIAGONAL_LEFT,
-				Version.BANNER_DIAGONAL_RIGHT,
-				Version.BANNER_DIAGONAL_UP_LEFT,
-				Version.BANNER_DIAGONAL_UP_RIGHT,
-				Version.BANNER_FLOWER,
-				Version.BANNER_GRADIENT,
-				Version.BANNER_GRADIENT_UP,
-				Version.BANNER_HALF_HORIZONTAL,
-				Version.BANNER_HALF_HORIZONTAL_BOTTOM,
-				Version.BANNER_HALF_VERTICAL,
-				Version.BANNER_HALF_VERTICAL_RIGHT,
-				Version.BANNER_MOJANG,
-				Version.BANNER_RHOMBUS,
-				Version.BANNER_SKULL,
-				Version.BANNER_SMALL_STRIPES,
-				Version.BANNER_SQUARE_BOTTOM_LEFT,
-				Version.BANNER_SQUARE_BOTTOM_RIGHT,
-				Version.BANNER_SQUARE_TOP_LEFT,
-				Version.BANNER_SQUARE_TOP_RIGHT,
-				Version.BANNER_STRAIGHT_CROSS,
-				Version.BANNER_STRIPE_BOTTOM,
-				Version.BANNER_STRIPE_CENTER,
-				Version.BANNER_STRIPE_DOWNLEFT,
-				Version.BANNER_STRIPE_DOWNRIGHT,
-				Version.BANNER_STRIPE_LEFT,
-				Version.BANNER_STRIPE_MIDDLE,
-				Version.BANNER_STRIPE_RIGHT,
-				Version.BANNER_STRIPE_TOP,
-				Version.BANNER_TRIANGLE_BOTTOM,
-				Version.BANNER_TRIANGLE_TOP,
-				Version.BANNER_TRIANGLES_BOTTOM,
-				Version.BANNER_TRIANGLES_TOP,
-				Version.BANNER_BASE,
-				Version.BAT,
-				Version.BEACON_BEAM,
-				Version.BEAR_POLARBEAR,
-				Version.BED_BLACK,
-				Version.BED_BLUE,
-				Version.BED_BROWN,
-				Version.BED_CYAN,
-				Version.BED_GRAY,
-				Version.BED_GREEN,
-				Version.BED_LIGHT_BLUE,
-				Version.BED_LIGHT_GRAY,
-				Version.BED_LIME,
-				Version.BED_MAGENTA,
-				Version.BED_ORANGE,
-				Version.BED_PINK,
-				Version.BED_PURPLE,
-				Version.BED_RED,
-				Version.BED_WHITE,
-				Version.BED_YELLOW,
-				Version.BLAZE,
-				Version.BOAT_ACACIA,
-				Version.BOAT_BIRCH,
-				Version.BOAT_DARK_OAK,
-				Version.BOAT_JUNGLE,
-				Version.BOAT_OAK,
-				Version.BOAT_SPRUCE,
-				Version.CAT_BLACK,
-				Version.CAT_OCELOT,
-				Version.CAT_RED,
-				Version.CAT_SIAMESE,
-				Version.CHEST_CHRISTMAS,
-				Version.CHEST_CHRISTMAS_DOUBLE,
-				Version.CHEST_ENDER,
-				Version.CHEST_NORMAL,
-				Version.CHEST_NORMAL_DOUBLE,
-				Version.CHEST_TRAPPED,
-				Version.CHEST_TRAPPED_DOUBLE,
-				Version.CHICKEN,
-				Version.CONDUIT_BASE,
-				Version.CONDUIT_BREAK_PARTICLE,
-				Version.CONDUIT_CAGE,
-				Version.CONDUIT_CLOSED_EYE,
-				Version.CONDUIT_OPEN_EYE,
-				Version.CONDUIT_WIND,
-				Version.CONDUIT_WIND_VERTICAL,
-				Version.COW_COW,
-				Version.COW_MOOSHROOM,
-				Version.CREEPER_CREEPER,
-				Version.CREEPER_CREEPER_ARMOR,
-				Version.DOLPHIN,
-				Version.ELYTRA,
-				Version.ENCHANTING_TABLE_BOOK,
-				Version.END_CRYSTAL_END_CRYSTAL,
-				Version.END_CRYSTAL_END_CRYSTAL_BEAM,
-				Version.END_GATEWAY_BEAM,
-				Version.END_PORTAL,
-				Version.ENDERDRAGON_DRAGON,
-				Version.ENDERDRAGON_DRAGON_EXPLODING,
-				Version.ENDERDRAGON_DRAGON_EYES,
-				Version.ENDERDRAGON_DRAGON_FIREBALL,
-				Version.ENDERMAN_ENDERMAN,
-				Version.ENDERMAN_ENDERMAN_EYES,
-				Version.ENDERMITE,
-				Version.EXPERIENCE_ORB,
-				Version.EXPLOSION,
-				Version.FISH_COD,
-				Version.FISH_PUFFERFISH,
-				Version.FISH_SALMON,
-				Version.FISH_TROPICAL_A,
-				Version.FISH_TROPICAL_A_PATTERN_1,
-				Version.FISH_TROPICAL_A_PATTERN_2,
-				Version.FISH_TROPICAL_A_PATTERN_3,
-				Version.FISH_TROPICAL_A_PATTERN_4,
-				Version.FISH_TROPICAL_A_PATTERN_5,
-				Version.FISH_TROPICAL_A_PATTERN_6,
-				Version.FISH_TROPICAL_B,
-				Version.FISH_TROPICAL_B_PATTERN_1,
-				Version.FISH_TROPICAL_B_PATTERN_2,
-				Version.FISH_TROPICAL_B_PATTERN_3,
-				Version.FISH_TROPICAL_B_PATTERN_4,
-				Version.FISH_TROPICAL_B_PATTERN_5,
-				Version.FISH_TROPICAL_B_PATTERN_6,
-				Version.GHAST_GHAST,
-				Version.GHAST_GHAST_SHOOTING,
-				Version.GUARDIAN,
-				Version.GUARDIAN_BEAM,
-				Version.GUARDIAN_ELDER,
-				Version.HORSE_ARMOR_HORSE_ARMOR_DIAMOND,
-				Version.HORSE_ARMOR_HORSE_ARMOR_GOLD,
-				Version.HORSE_ARMOR_HORSE_ARMOR_IRON,
-				Version.HORSE_DONKEY,
-				Version.HORSE_HORSE_BLACK,
-				Version.HORSE_HORSE_BROWN,
-				Version.HORSE_HORSE_CHESTNUT,
-				Version.HORSE_HORSE_CREAMY,
-				Version.HORSE_HORSE_DARKBROWN,
-				Version.HORSE_HORSE_GRAY,
-				Version.HORSE_HORSE_MARKINGS_BLACKDOTS,
-				Version.HORSE_HORSE_MARKINGS_WHITE,
-				Version.HORSE_HORSE_MARKINGS_WHITEDOTS,
-				Version.HORSE_HORSE_MARKINGS_WHITEFIELD,
-				Version.HORSE_HORSE_SKELETON,
-				Version.HORSE_HORSE_WHITE,
-				Version.HORSE_HORSE_ZOMBIE,
-				Version.HORSE_MULE,
-				Version.ILLAGER_EVOKER,
-				Version.ILLAGER_EVOKER_FANGS,
-				Version.ILLAGER_ILLUSIONER,
-				Version.ILLAGER_VEX,
-				Version.ILLAGER_VEX_CHARGING,
-				Version.ILLAGER_VINDICATOR,
-				Version.IRON_GOLEM,
-				Version.LEAD_KNOT,
-				Version.LLAMA_BROWN,
-				Version.LLAMA_CREAMY,
-				Version.LLAMA_DECOR_BLACK,
-				Version.LLAMA_DECOR_BLUE,
-				Version.LLAMA_DECOR_BROWN,
-				Version.LLAMA_DECOR_CYAN,
-				Version.LLAMA_DECOR_GRAY,
-				Version.LLAMA_DECOR_GREEN,
-				Version.LLAMA_DECOR_LIGHT_BLUE,
-				Version.LLAMA_DECOR_LIGHT_GRAY,
-				Version.LLAMA_DECOR_LIME,
-				Version.LLAMA_DECOR_MAGENTA,
-				Version.LLAMA_DECOR_ORANGE,
-				Version.LLAMA_DECOR_PINK,
-				Version.LLAMA_DECOR_PURPLE,
-				Version.LLAMA_DECOR_RED,
-				Version.LLAMA_DECOR_WHITE,
-				Version.LLAMA_DECOR_YELLOW,
-				Version.LLAMA_GRAY,
-				Version.LLAMA_SPIT,
-				Version.LLAMA_WHITE,
-				Version.MINECART,
-				Version.PARROT_PARROT_BLUE,
-				Version.PARROT_PARROT_GREEN,
-				Version.PARROT_PARROT_GREY,
-				Version.PARROT_PARROT_RED_BLUE,
-				Version.PARROT_PARROT_YELLOW_BLUE,
-				Version.PHANTOM,
-				Version.PHANTOM_EYES,
-				Version.PIG_PIG,
-				Version.PIG_PIG_SADDLE,
-				Version.PROJECTILES_ARROW,
-				Version.PROJECTILES_SPECTRAL_ARROW,
-				Version.PROJECTILES_TIPPED_ARROW,
-				Version.RABBIT_BLACK,
-				Version.RABBIT_BROWN,
-				Version.RABBIT_CAERBANNOG,
-				Version.RABBIT_GOLD,
-				Version.RABBIT_SALT,
-				Version.RABBIT_TOAST,
-				Version.RABBIT_WHITE,
-				Version.RABBIT_WHITE_SPLOTCHED,
-				Version.SHEEP_SHEEP,
-				Version.SHEEP_SHEEP_FUR,
-				Version.SHIELD_BASE,
-				Version.SHIELD_BORDER,
-				Version.SHIELD_BRICKS,
-				Version.SHIELD_CIRCLE,
-				Version.SHIELD_CREEPER,
-				Version.SHIELD_CROSS,
-				Version.SHIELD_CURLY_BORDER,
-				Version.SHIELD_DIAGONAL_LEFT,
-				Version.SHIELD_DIAGONAL_RIGHT,
-				Version.SHIELD_DIAGONAL_UP_LEFT,
-				Version.SHIELD_DIAGONAL_UP_RIGHT,
-				Version.SHIELD_FLOWER,
-				Version.SHIELD_GRADIENT,
-				Version.SHIELD_GRADIENT_UP,
-				Version.SHIELD_HALF_HORIZONTAL,
-				Version.SHIELD_HALF_HORIZONTAL_BOTTOM,
-				Version.SHIELD_HALF_VERTICAL,
-				Version.SHIELD_HALF_VERTICAL_RIGHT,
-				Version.SHIELD_MOJANG,
-				Version.SHIELD_RHOMBUS,
-				Version.SHIELD_SKULL,
-				Version.SHIELD_SMALL_STRIPES,
-				Version.SHIELD_SQUARE_BOTTOM_LEFT,
-				Version.SHIELD_SQUARE_BOTTOM_RIGHT,
-				Version.SHIELD_SQUARE_TOP_LEFT,
-				Version.SHIELD_SQUARE_TOP_RIGHT,
-				Version.SHIELD_STRAIGHT_CROSS,
-				Version.SHIELD_STRIPE_BOTTOM,
-				Version.SHIELD_STRIPE_CENTER,
-				Version.SHIELD_STRIPE_DOWNLEFT,
-				Version.SHIELD_STRIPE_DOWNRIGHT,
-				Version.SHIELD_STRIPE_LEFT,
-				Version.SHIELD_STRIPE_MIDDLE,
-				Version.SHIELD_STRIPE_RIGHT,
-				Version.SHIELD_STRIPE_TOP,
-				Version.SHIELD_TRIANGLE_BOTTOM,
-				Version.SHIELD_TRIANGLE_TOP,
-				Version.SHIELD_TRIANGLES_BOTTOM,
-				Version.SHIELD_TRIANGLES_TOP,
-				Version.SHIELD_BASE,
-				Version.SHIELD_BASE_NOPATTERN,
-				Version.SHULKER_SHULKER,
-				Version.SHULKER_SHULKER_BLACK,
-				Version.SHULKER_SHULKER_BLUE,
-				Version.SHULKER_SHULKER_BROWN,
-				Version.SHULKER_SHULKER_CYAN,
-				Version.SHULKER_SHULKER_GRAY,
-				Version.SHULKER_SHULKER_GREEN,
-				Version.SHULKER_SHULKER_LIGHT_BLUE,
-				Version.SHULKER_SHULKER_LIGHT_GRAY,
-				Version.SHULKER_SHULKER_LIME,
-				Version.SHULKER_SHULKER_MAGENTA,
-				Version.SHULKER_SHULKER_ORANGE,
-				Version.SHULKER_SHULKER_PINK,
-				Version.SHULKER_SHULKER_PURPLE,
-				Version.SHULKER_SHULKER_RED,
-				Version.SHULKER_SHULKER_WHITE,
-				Version.SHULKER_SHULKER_YELLOW,
-				Version.SHULKER_SPARK,
-				Version.SIGN,
-				Version.SILVERFISH,
-				Version.SKELETON_SKELETON,
-				Version.SKELETON_STRAY,
-				Version.SKELETON_STRAY_OVERLAY,
-				Version.SKELETON_WITHER_SKELETON,
-				Version.SLIME_MAGMACUBE,
-				Version.SLIME_SLIME,
-				Version.SNOW_GOLEM,
-				Version.SPIDER_CAVE_SPIDER,
-				Version.SPIDER_SPIDER,
-				Version.SPIDER_EYES,
-				Version.SQUID,
-				Version.STEVE,
-				Version.SWEEP,
-				Version.TRIDENT,
-				Version.TRIDENT_RIPTIDE,
-				Version.TURTLE_BIG_SEA_TURTLE,
-				Version.VILLAGER_BUTCHER,
-				Version.VILLAGER_FARMER,
-				Version.VILLAGER_LIBRARIAN,
-				Version.VILLAGER_PRIEST,
-				Version.VILLAGER_SMITH,
-				Version.VILLAGER_VILLAGER,
-				Version.WITCH,
-				Version.WITHER_WITHER,
-				Version.WITHER_WITHER_ARMOR,
-				Version.WITHER_WITHER_INVULNERABLE,
-				Version.WOLF_WOLF,
-				Version.WOLF_WOLF_ANGRY,
-				Version.WOLF_WOLF_COLLAR,
-				Version.WOLF_WOLF_TAME,
-				Version.ZOMBIE_DROWNED,
-				Version.ZOMBIE_DROWNED_OUTER_LAYER,
-				Version.ZOMBIE_HUSK,
-				Version.ZOMBIE_ZOMBIE,
-				Version.ZOMBIE_ZOMBIE_VILLAGER,
-				Version.ZOMBIE_PIGMAN,
-				Version.ZOMBIE_VILLAGER_ZOMBIE_BUTCHER,
-				Version.ZOMBIE_VILLAGER_ZOMBIE_FARMER,
-				Version.ZOMBIE_VILLAGER_ZOMBIE_LIBRARIAN,
-				Version.ZOMBIE_VILLAGER_ZOMBIE_PRIEST,
-				Version.ZOMBIE_VILLAGER_ZOMBIE_SMITH,
-				Version.ZOMBIE_VILLAGER_ZOMBIE_VILLAGER,
-		}, version);
-		DIR_ENVIRONMENT.setTextures(new Texture[]{
-				Version.CLOUDS,
-				Version.END_SKY,
-				Version.MOON_PHASES,
-				Version.RAIN,
-				Version.SNOW,
-				Version.SUN,
-		}, version);
-		DIR_GUIS.setTextures(new Texture[]{
-				Version.ADVANCEMENTS_BACKGROUNDS_ADVENTURE,
-				Version.ADVANCEMENTS_BACKGROUNDS_END,
-				Version.ADVANCEMENTS_BACKGROUNDS_HUSBANDRY,
-				Version.ADVANCEMENTS_BACKGROUNDS_NETHER,
-				Version.ADVANCEMENTS_BACKGROUNDS_STONE,
-				Version.ADVANCEMENTS_TABS,
-				Version.ADVANCEMENTS_WIDGETS,
-				Version.ADVANCEMENTS_WINDOW,
-				Version.BARS,
-				Version.BOOK,
-				Version.CONTAINER_ANVIL,
-				Version.CONTAINER_BEACON,
-				Version.CONTAINER_BREWING_STAND,
-				Version.CONTAINER_CRAFTING_TABLE,
-				Version.CONTAINER_CREATIVE_INVENTORY_TAB_INVENTORY,
-				Version.CONTAINER_CREATIVE_INVENTORY_TAB_ITEM_SEARCH,
-				Version.CONTAINER_CREATIVE_INVENTORY_TAB_ITEMS,
-				Version.CONTAINER_CREATIVE_INVENTORY_TABS,
-				Version.CONTAINER_DISPENSER,
-				Version.CONTAINER_ENCHANTING_TABLE,
-				Version.CONTAINER_FURNACE,
-				Version.CONTAINER_GENERIC_54,
-				Version.CONTAINER_HOPPER,
-				Version.CONTAINER_HORSE,
-				Version.CONTAINER_INVENTORY,
-				Version.CONTAINER_SHULKER_BOX,
-				Version.CONTAINER_STATS_ICONS,
-				Version.CONTAINER_VILLAGER,
-				Version.DEMO_BACKGROUND,
-				Version.ICONS,
-				Version.OPTIONS_BACKGROUND,
-				Version.PRESETS_CHAOS,
-				Version.PRESETS_DELIGHT,
-				Version.PRESETS_DROUGHT,
-				Version.PRESETS_ISLES,
-				Version.PRESETS_LUCK,
-				Version.PRESETS_MADNESS,
-				Version.PRESETS_WATER,
-				Version.RECIPE_BOOK,
-				Version.RECIPE_BUTTON,
-				Version.RESOURCE_PACKS,
-				Version.SERVER_SELECTION,
-				Version.SPECTATOR_WIDGETS,
-				Version.STREAM_INDICATOR,
-				Version.TITLE_BACKGROUND_PANORAMA_0,
-				Version.TITLE_BACKGROUND_PANORAMA_1,
-				Version.TITLE_BACKGROUND_PANORAMA_2,
-				Version.TITLE_BACKGROUND_PANORAMA_3,
-				Version.TITLE_BACKGROUND_PANORAMA_4,
-				Version.TITLE_BACKGROUND_PANORAMA_5,
-				Version.TITLE_BACKGROUND_PANORAMA_OVERLAY,
-				Version.TITLE_EDITION,
-				Version.TITLE_MINECRAFT,
-				Version.TITLE_MOJANG,
-				Version.TOASTS,
-				Version.WIDGETS,
-				Version.WORLD_SELECTION,
-		}, version);
-		DIR_ITEMS.setTextures(new Texture[]{
-				Version.ACACIA_BOAT,
-				Version.ACACIA_DOOR,
-				Version.APPLE,
-				Version.ARMOR_STAND,
-				Version.ARROW,
-				Version.BAKED_POTATO,
-				Version.BARRIER,
-				Version.BEEF,
-				Version.BEETROOT,
-				Version.BEETROOT_SEEDS,
-				Version.BEETROOT_SOUP,
-				Version.BIRCH_BOAT,
-				Version.BIRCH_DOOR,
-				Version.BLAZE_POWDER,
-				Version.BLAZE_ROD,
-				Version.BONE,
-				Version.BONE_MEAL,
-				Version.BOOK,
-				Version.BOW,
-				Version.BOW_PULLING_0,
-				Version.BOW_PULLING_1,
-				Version.BOW_PULLING_2,
-				Version.BOWL,
-				Version.BREAD,
-				Version.BREWING_STAND,
-				Version.BRICK,
-				Version.BROKEN_ELYTRA,
-				Version.BUCKET,
-				Version.CACTUS_GREEN,
-				Version.CAKE,
-				Version.CARROT,
-				Version.CARROT_ON_A_STICK,
-				Version.CAULDRON,
-				Version.CHAINMAIL_BOOTS,
-				Version.CHAINMAIL_CHESTPLATE,
-				Version.CHAINMAIL_HELMET,
-				Version.CHAINMAIL_LEGGINGS,
-				Version.CHARCOAL,
-				Version.CHEST_MINECART,
-				Version.CHICKEN,
-				Version.CHORUS_FRUIT,
-				Version.CLAY_BALL,
-				Version.CLOCK_00,
-				Version.CLOCK_01,
-				Version.CLOCK_02,
-				Version.CLOCK_03,
-				Version.CLOCK_04,
-				Version.CLOCK_05,
-				Version.CLOCK_06,
-				Version.CLOCK_07,
-				Version.CLOCK_08,
-				Version.CLOCK_09,
-				Version.CLOCK_10,
-				Version.CLOCK_11,
-				Version.CLOCK_12,
-				Version.CLOCK_13,
-				Version.CLOCK_14,
-				Version.CLOCK_15,
-				Version.CLOCK_16,
-				Version.CLOCK_17,
-				Version.CLOCK_18,
-				Version.CLOCK_19,
-				Version.CLOCK_20,
-				Version.CLOCK_21,
-				Version.CLOCK_22,
-				Version.CLOCK_23,
-				Version.CLOCK_24,
-				Version.CLOCK_25,
-				Version.CLOCK_26,
-				Version.CLOCK_27,
-				Version.CLOCK_28,
-				Version.CLOCK_29,
-				Version.CLOCK_30,
-				Version.CLOCK_31,
-				Version.CLOCK_32,
-				Version.CLOCK_33,
-				Version.CLOCK_34,
-				Version.CLOCK_35,
-				Version.CLOCK_36,
-				Version.CLOCK_37,
-				Version.CLOCK_38,
-				Version.CLOCK_39,
-				Version.CLOCK_40,
-				Version.CLOCK_41,
-				Version.CLOCK_42,
-				Version.CLOCK_43,
-				Version.CLOCK_44,
-				Version.CLOCK_45,
-				Version.CLOCK_46,
-				Version.CLOCK_47,
-				Version.CLOCK_48,
-				Version.CLOCK_49,
-				Version.CLOCK_50,
-				Version.CLOCK_51,
-				Version.CLOCK_52,
-				Version.CLOCK_53,
-				Version.CLOCK_54,
-				Version.CLOCK_55,
-				Version.CLOCK_56,
-				Version.CLOCK_57,
-				Version.CLOCK_58,
-				Version.CLOCK_59,
-				Version.CLOCK_60,
-				Version.CLOCK_61,
-				Version.CLOCK_62,
-				Version.CLOCK_63,
-				Version.COAL,
-				Version.COCOA_BEANS,
-				Version.COD,
-				Version.COD_BUCKET,
-				Version.COMMAND_BLOCK_MINECART,
-				Version.COMPARATOR,
-				Version.COMPASS_00,
-				Version.COMPASS_01,
-				Version.COMPASS_02,
-				Version.COMPASS_03,
-				Version.COMPASS_04,
-				Version.COMPASS_05,
-				Version.COMPASS_06,
-				Version.COMPASS_07,
-				Version.COMPASS_08,
-				Version.COMPASS_09,
-				Version.COMPASS_10,
-				Version.COMPASS_11,
-				Version.COMPASS_12,
-				Version.COMPASS_13,
-				Version.COMPASS_14,
-				Version.COMPASS_15,
-				Version.COMPASS_16,
-				Version.COMPASS_17,
-				Version.COMPASS_18,
-				Version.COMPASS_19,
-				Version.COMPASS_20,
-				Version.COMPASS_21,
-				Version.COMPASS_22,
-				Version.COMPASS_23,
-				Version.COMPASS_24,
-				Version.COMPASS_25,
-				Version.COMPASS_26,
-				Version.COMPASS_27,
-				Version.COMPASS_28,
-				Version.COMPASS_29,
-				Version.COMPASS_30,
-				Version.COMPASS_31,
-				Version.COOKED_BEEF,
-				Version.COOKED_CHICKEN,
-				Version.COOKED_COD,
-				Version.COOKED_MUTTON,
-				Version.COOKED_PORKCHOP,
-				Version.COOKED_RABBIT,
-				Version.COOKED_SALMON,
-				Version.COOKIE,
-				Version.CYAN_DYE,
-				Version.DANDELION_YELLOW,
-				Version.DARK_OAK_BOAT,
-				Version.DARK_OAK_DOOR,
-				Version.DIAMOND,
-				Version.DIAMOND_AXE,
-				Version.DIAMOND_BOOTS,
-				Version.DIAMOND_CHESTPLATE,
-				Version.DIAMOND_HELMET,
-				Version.DIAMOND_HOE,
-				Version.DIAMOND_HORSE_ARMOR,
-				Version.DIAMOND_LEGGINGS,
-				Version.DIAMOND_PICKAXE,
-				Version.DIAMOND_SHOVEL,
-				Version.DIAMOND_SWORD,
-				Version.DRAGON_BREATH,
-				Version.DRIED_KELP,
-				Version.EGG,
-				Version.ELYTRA,
-				Version.EMERALD,
-				Version.EMPTY_ARMOR_SLOT_BOOTS,
-				Version.EMPTY_ARMOR_SLOT_CHESTPLATE,
-				Version.EMPTY_ARMOR_SLOT_HELMET,
-				Version.EMPTY_ARMOR_SLOT_LEGGINGS,
-				Version.EMPTY_ARMOR_SLOT_SHIELD,
-				Version.ENCHANTED_BOOK,
-				Version.END_CRYSTAL,
-				Version.ENDER_EYE,
-				Version.ENDER_PEARL,
-				Version.EXPERIENCE_BOTTLE,
-				Version.FEATHER,
-				Version.FERMENTED_SPIDER_EYE,
-				Version.FILLED_MAP,
-				Version.FILLED_MAP_MARKINGS,
-				Version.FIRE_CHARGE,
-				Version.FIREWORK_ROCKET,
-				Version.FIREWORK_STAR,
-				Version.FIREWORK_STAR_OVERLAY,
-				Version.FISHING_ROD,
-				Version.FISHING_ROD_CAST,
-				Version.FLINT,
-				Version.FLINT_AND_STEEL,
-				Version.FLOWER_POT,
-				Version.FURNACE_MINECART,
-				Version.GHAST_TEAR,
-				Version.GLASS_BOTTLE,
-				Version.GLISTERING_MELON_SLICE,
-				Version.GLOWSTONE_DUST,
-				Version.GOLD_INGOT,
-				Version.GOLD_NUGGET,
-				Version.GOLDEN_APPLE,
-				Version.GOLDEN_AXE,
-				Version.GOLDEN_BOOTS,
-				Version.GOLDEN_CARROT,
-				Version.GOLDEN_CHESTPLATE,
-				Version.GOLDEN_HELMET,
-				Version.GOLDEN_HOE,
-				Version.GOLDEN_HORSE_ARMOR,
-				Version.GOLDEN_LEGGINGS,
-				Version.GOLDEN_PICKAXE,
-				Version.GOLDEN_SHOVEL,
-				Version.GOLDEN_SWORD,
-				Version.GRAY_DYE,
-				Version.GUNPOWDER,
-				Version.HEART_OF_THE_SEA,
-				Version.HOPPER,
-				Version.HOPPER_MINECART,
-				Version.INK_SAC,
-				Version.IRON_AXE,
-				Version.IRON_BOOTS,
-				Version.IRON_CHESTPLATE,
-				Version.IRON_DOOR,
-				Version.IRON_HELMET,
-				Version.IRON_HOE,
-				Version.IRON_HORSE_ARMOR,
-				Version.IRON_INGOT,
-				Version.IRON_LEGGINGS,
-				Version.IRON_NUGGET,
-				Version.IRON_PICKAXE,
-				Version.IRON_SHOVEL,
-				Version.IRON_SWORD,
-				Version.ITEM_FRAME,
-				Version.JUNGLE_BOAT,
-				Version.JUNGLE_DOOR,
-				Version.KELP,
-				Version.KNOWLEDGE_BOOK,
-				Version.LAPIS_LAZULI,
-				Version.LAVA_BUCKET,
-				Version.LEAD,
-				Version.LEATHER,
-				Version.LEATHER_BOOTS,
-				Version.LEATHER_BOOTS_OVERLAY,
-				Version.LEATHER_CHESTPLATE,
-				Version.LEATHER_CHESTPLATE_OVERLAY,
-				Version.LEATHER_HELMET,
-				Version.LEATHER_HELMET_OVERLAY,
-				Version.LEATHER_LEGGINGS,
-				Version.LEATHER_LEGGINGS_OVERLAY,
-				Version.LIGHT_BLUE_DYE,
-				Version.LIGHT_GRAY_DYE,
-				Version.LIME_DYE,
-				Version.LINGERING_POTION,
-				Version.MAGENTA_DYE,
-				Version.MAGMA_CREAM,
-				Version.MAP,
-				Version.MELON_SEEDS,
-				Version.MELON_SLICE,
-				Version.MILK_BUCKET,
-				Version.MINECART,
-				Version.MUSHROOM_STEW,
-				Version.MUSIC_DISC_11,
-				Version.MUSIC_DISC_13,
-				Version.MUSIC_DISC_BLOCKS,
-				Version.MUSIC_DISC_CAT,
-				Version.MUSIC_DISC_CHIRP,
-				Version.MUSIC_DISC_FAR,
-				Version.MUSIC_DISC_MALL,
-				Version.MUSIC_DISC_MELLOHI,
-				Version.MUSIC_DISC_STAL,
-				Version.MUSIC_DISC_STRAD,
-				Version.MUSIC_DISC_WAIT,
-				Version.MUSIC_DISC_WARD,
-				Version.MUTTON,
-				Version.NAME_TAG,
-				Version.NAUTILUS_SHELL,
-				Version.NETHER_BRICK,
-				Version.NETHER_STAR,
-				Version.NETHER_WART,
-				Version.OAK_BOAT,
-				Version.OAK_DOOR,
-				Version.ORANGE_DYE,
-				Version.PAINTING,
-				Version.PAPER,
-				Version.PHANTOM_MEMBRANE,
-				Version.PINK_DYE,
-				Version.POISONOUS_POTATO,
-				Version.POPPED_CHORUS_FRUIT,
-				Version.PORKCHOP,
-				Version.POTATO,
-				Version.POTION,
-				Version.POTION_OVERLAY,
-				Version.PRISMARINE_CRYSTALS,
-				Version.PRISMARINE_SHARD,
-				Version.PUFFERFISH,
-				Version.PUFFERFISH_BUCKET,
-				Version.PUMPKIN_PIE,
-				Version.PUMPKIN_SEEDS,
-				Version.PURPLE_DYE,
-				Version.QUARTZ,
-				Version.RABBIT,
-				Version.RABBIT_FOOT,
-				Version.RABBIT_HIDE,
-				Version.RABBIT_STEW,
-				Version.REDSTONE,
-				Version.REPEATER,
-				Version.ROSE_RED,
-				Version.ROTTEN_FLESH,
-				Version.RUBY,
-				Version.SADDLE,
-				Version.SALMON,
-				Version.SALMON_BUCKET,
-				Version.SCUTE,
-				Version.SEA_PICKLE,
-				Version.SEAGRASS,
-				Version.SHEARS,
-				Version.SHULKER_SHELL,
-				Version.SIGN,
-				Version.SLIME_BALL,
-				Version.SNOWBALL,
-				Version.SPAWN_EGG,
-				Version.SPAWN_EGG_OVERLAY,
-				Version.SPECTRAL_ARROW,
-				Version.SPIDER_EYE,
-				Version.SPLASH_POTION,
-				Version.SPRUCE_BOAT,
-				Version.SPRUCE_DOOR,
-				Version.STICK,
-				Version.STONE_AXE,
-				Version.STONE_HOE,
-				Version.STONE_PICKAXE,
-				Version.STONE_SHOVEL,
-				Version.STONE_SWORD,
-				Version.STRING,
-				Version.STRUCTURE_VOID,
-				Version.SUGAR,
-				Version.SUGAR_CANE,
-				Version.TIPPED_ARROW_BASE,
-				Version.TIPPED_ARROW_HEAD,
-				Version.TNT_MINECART,
-				Version.TOTEM_OF_UNDYING,
-				Version.TRIDENT,
-				Version.TROPICAL_FISH,
-				Version.TROPICAL_FISH_BUCKET,
-				Version.TURTLE_EGG,
-				Version.TURTLE_HELMET,
-				Version.WATER_BUCKET,
-				Version.WHEAT,
-				Version.WHEAT_SEEDS,
-				Version.WOODEN_AXE,
-				Version.WOODEN_HOE,
-				Version.WOODEN_PICKAXE,
-				Version.WOODEN_SHOVEL,
-				Version.WOODEN_SWORD,
-				Version.WRITABLE_BOOK,
-				Version.WRITTEN_BOOK,
-		}, version);
-		DIR_MAP.setTextures(new Texture[]{
-				Version.MAP_BACKGROUND,
-				Version.MAP_ICONS,
-		}, version);
-		DIR_MISC.setTextures(new Texture[]{
-				Version.ENCHANTED_ITEM_GLINT,
-				Version.FORCEFIELD,
-				Version.PUMPKINBLUR,
-				Version.SHADOW,
-				Version.UNDERWATER,
-				Version.UNKNOWN_PACK,
-				Version.UNKNOWN_SERVER,
-				Version.VIGNETTE,
-		}, version);
-		DIR_MODELS.setTextures(new Texture[]{
-				Version.ARMOR_CHAINMAIL_LAYER_1,
-				Version.ARMOR_CHAINMAIL_LAYER_2,
-				Version.ARMOR_DIAMOND_LAYER_1,
-				Version.ARMOR_DIAMOND_LAYER_2,
-				Version.ARMOR_GOLD_LAYER_1,
-				Version.ARMOR_GOLD_LAYER_2,
-				Version.ARMOR_IRON_LAYER_1,
-				Version.ARMOR_IRON_LAYER_2,
-				Version.ARMOR_LEATHER_LAYER_1,
-				Version.ARMOR_LEATHER_LAYER_1_OVERLAY,
-				Version.ARMOR_LEATHER_LAYER_2,
-				Version.ARMOR_LEATHER_LAYER_2_OVERLAY,
-				Version.ARMOR_TURTLE_LAYER_1,
-		}, version);
-		DIR_PAINTINGS.setTextures(new Texture[]{
-				Version.PAINTINGS_KRISTOFFER_ZETTERSTRAND,
-		}, version);
-		DIR_PARTICLES.setTextures(new Texture[]{
-				Version.FOOTPRINT,
-				Version.PARTICLES,
-		}, version);
+		DIR_BLOCKS.addTexture(ACACIA_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(ACACIA_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(ACACIA_LEAVES, version);
+		DIR_BLOCKS.addTexture(ACACIA_LOG, version);
+		DIR_BLOCKS.addTexture(ACACIA_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(ACACIA_PLANKS, version);
+		DIR_BLOCKS.addTexture(ACACIA_SAPLING, version);
+		DIR_BLOCKS.addTexture(ACACIA_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(ACTIVATOR_RAIL, version);
+		DIR_BLOCKS.addTexture(ACTIVATOR_RAIL_ON, version);
+		DIR_BLOCKS.addTexture(ALLIUM, version);
+		DIR_BLOCKS.addTexture(ANDESITE, version);
+		DIR_BLOCKS.addTexture(ANVIL, version);
+		DIR_BLOCKS.addTexture(ANVIL_TOP, version);
+		DIR_BLOCKS.addTexture(ATTACHED_MELON_STEM, version);
+		DIR_BLOCKS.addTexture(ATTACHED_PUMPKIN_STEM, version);
+		DIR_BLOCKS.addTexture(AZURE_BLUET, version);
+		DIR_BLOCKS.addTexture(BEACON, version);
+		DIR_BLOCKS.addTexture(BEDROCK, version);
+		DIR_BLOCKS.addTexture(BEETROOTS_STAGE0, version);
+		DIR_BLOCKS.addTexture(BEETROOTS_STAGE1, version);
+		DIR_BLOCKS.addTexture(BEETROOTS_STAGE2, version);
+		DIR_BLOCKS.addTexture(BEETROOTS_STAGE3, version);
+		DIR_BLOCKS.addTexture(BIRCH_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(BIRCH_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(BIRCH_LEAVES, version);
+		DIR_BLOCKS.addTexture(BIRCH_LOG, version);
+		DIR_BLOCKS.addTexture(BIRCH_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(BIRCH_PLANKS, version);
+		DIR_BLOCKS.addTexture(BIRCH_SAPLING, version);
+		DIR_BLOCKS.addTexture(BIRCH_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(BLACK_CONCRETE, version);
+		DIR_BLOCKS.addTexture(BLACK_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(BLACK_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(BLACK_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(BLACK_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(BLACK_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(BLACK_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(BLACK_WOOL, version);
+		DIR_BLOCKS.addTexture(BLUE_CONCRETE, version);
+		DIR_BLOCKS.addTexture(BLUE_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(BLUE_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(BLUE_ICE, version);
+		DIR_BLOCKS.addTexture(BLUE_ORCHID, version);
+		DIR_BLOCKS.addTexture(BLUE_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(BLUE_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(BLUE_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(BLUE_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(BLUE_WOOL, version);
+		DIR_BLOCKS.addTexture(BONE_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(BONE_BLOCK_TOP, version);
+		DIR_BLOCKS.addTexture(BOOKSHELF, version);
+		DIR_BLOCKS.addTexture(BRAIN_CORAL, version);
+		DIR_BLOCKS.addTexture(BRAIN_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(BRAIN_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(BREWING_STAND, version);
+		DIR_BLOCKS.addTexture(BREWING_STAND_BASE, version);
+		DIR_BLOCKS.addTexture(BRICKS, version);
+		DIR_BLOCKS.addTexture(BROWN_CONCRETE, version);
+		DIR_BLOCKS.addTexture(BROWN_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(BROWN_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(BROWN_MUSHROOM, version);
+		DIR_BLOCKS.addTexture(BROWN_MUSHROOM_BLOCK, version);
+		DIR_BLOCKS.addTexture(BROWN_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(BROWN_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(BROWN_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(BROWN_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(BROWN_WOOL, version);
+		DIR_BLOCKS.addTexture(BUBBLE_CORAL, version);
+		DIR_BLOCKS.addTexture(BUBBLE_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(BUBBLE_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(CACTUS_BOTTOM, version);
+		DIR_BLOCKS.addTexture(CACTUS_SIDE, version);
+		DIR_BLOCKS.addTexture(CACTUS_TOP, version);
+		DIR_BLOCKS.addTexture(CAKE_BOTTOM, version);
+		DIR_BLOCKS.addTexture(CAKE_INNER, version);
+		DIR_BLOCKS.addTexture(CAKE_SIDE, version);
+		DIR_BLOCKS.addTexture(CAKE_TOP, version);
+		DIR_BLOCKS.addTexture(CARROTS_STAGE0, version);
+		DIR_BLOCKS.addTexture(CARROTS_STAGE1, version);
+		DIR_BLOCKS.addTexture(CARROTS_STAGE2, version);
+		DIR_BLOCKS.addTexture(CARROTS_STAGE3, version);
+		DIR_BLOCKS.addTexture(CARVED_PUMPKIN, version);
+		DIR_BLOCKS.addTexture(CAULDRON_BOTTOM, version);
+		DIR_BLOCKS.addTexture(CAULDRON_INNER, version);
+		DIR_BLOCKS.addTexture(CAULDRON_SIDE, version);
+		DIR_BLOCKS.addTexture(CAULDRON_TOP, version);
+		DIR_BLOCKS.addTexture(CHAIN_COMMAND_BLOCK_BACK, version);
+		DIR_BLOCKS.addTexture(CHAIN_COMMAND_BLOCK_CONDITIONAL, version);
+		DIR_BLOCKS.addTexture(CHAIN_COMMAND_BLOCK_FRONT, version);
+		DIR_BLOCKS.addTexture(CHAIN_COMMAND_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(CHIPPED_ANVIL_TOP, version);
+		DIR_BLOCKS.addTexture(CHISELED_QUARTZ_BLOCK, version);
+		DIR_BLOCKS.addTexture(CHISELED_QUARTZ_BLOCK_TOP, version);
+		DIR_BLOCKS.addTexture(CHISELED_RED_SANDSTONE, version);
+		DIR_BLOCKS.addTexture(CHISELED_SANDSTONE, version);
+		DIR_BLOCKS.addTexture(CHISELED_STONE_BRICKS, version);
+		DIR_BLOCKS.addTexture(CHORUS_FLOWER, version);
+		DIR_BLOCKS.addTexture(CHORUS_FLOWER_DEAD, version);
+		DIR_BLOCKS.addTexture(CHORUS_PLANT, version);
+		DIR_BLOCKS.addTexture(CLAY, version);
+		DIR_BLOCKS.addTexture(COAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(COAL_ORE, version);
+		DIR_BLOCKS.addTexture(COARSE_DIRT, version);
+		DIR_BLOCKS.addTexture(COBBLESTONE, version);
+		DIR_BLOCKS.addTexture(COBWEB, version);
+		DIR_BLOCKS.addTexture(COCOA_STAGE0, version);
+		DIR_BLOCKS.addTexture(COCOA_STAGE1, version);
+		DIR_BLOCKS.addTexture(COCOA_STAGE2, version);
+		DIR_BLOCKS.addTexture(COMMAND_BLOCK_BACK, version);
+		DIR_BLOCKS.addTexture(COMMAND_BLOCK_CONDITIONAL, version);
+		DIR_BLOCKS.addTexture(COMMAND_BLOCK_FRONT, version);
+		DIR_BLOCKS.addTexture(COMMAND_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(COMPARATOR, version);
+		DIR_BLOCKS.addTexture(COMPARATOR_ON, version);
+		DIR_BLOCKS.addTexture(CONDUIT, version);
+		DIR_BLOCKS.addTexture(CRACKED_STONE_BRICKS, version);
+		DIR_BLOCKS.addTexture(CRAFTING_TABLE_FRONT, version);
+		DIR_BLOCKS.addTexture(CRAFTING_TABLE_SIDE, version);
+		DIR_BLOCKS.addTexture(CRAFTING_TABLE_TOP, version);
+		DIR_BLOCKS.addTexture(CUT_RED_SANDSTONE, version);
+		DIR_BLOCKS.addTexture(CUT_SANDSTONE, version);
+		DIR_BLOCKS.addTexture(CYAN_CONCRETE, version);
+		DIR_BLOCKS.addTexture(CYAN_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(CYAN_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(CYAN_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(CYAN_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(CYAN_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(CYAN_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(CYAN_WOOL, version);
+		DIR_BLOCKS.addTexture(DAMAGED_ANVIL_TOP, version);
+		DIR_BLOCKS.addTexture(DANDELION, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_LEAVES, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_LOG, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_PLANKS, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_SAPLING, version);
+		DIR_BLOCKS.addTexture(DARK_OAK_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(DARK_PRISMARINE, version);
+		DIR_BLOCKS.addTexture(DAYLIGHT_DETECTOR_INVERTED_TOP, version);
+		DIR_BLOCKS.addTexture(DAYLIGHT_DETECTOR_SIDE, version);
+		DIR_BLOCKS.addTexture(DAYLIGHT_DETECTOR_TOP, version);
+		DIR_BLOCKS.addTexture(DEAD_BRAIN_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(DEAD_BRAIN_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(DEAD_BUBBLE_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(DEAD_BUBBLE_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(DEAD_BUSH, version);
+		DIR_BLOCKS.addTexture(DEAD_FIRE_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(DEAD_FIRE_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(DEAD_HORN_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(DEAD_HORN_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(DEAD_TUBE_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(DEAD_TUBE_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(DEBUG, version);
+		DIR_BLOCKS.addTexture(DEBUG2, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_0, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_1, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_2, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_3, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_4, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_5, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_6, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_7, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_8, version);
+		DIR_BLOCKS.addTexture(DESTROY_STAGE_9, version);
+		DIR_BLOCKS.addTexture(DETECTOR_RAIL, version);
+		DIR_BLOCKS.addTexture(DETECTOR_RAIL_ON, version);
+		DIR_BLOCKS.addTexture(DIAMOND_BLOCK, version);
+		DIR_BLOCKS.addTexture(DIAMOND_ORE, version);
+		DIR_BLOCKS.addTexture(DIORITE, version);
+		DIR_BLOCKS.addTexture(DIRT, version);
+		DIR_BLOCKS.addTexture(DISPENSER_FRONT, version);
+		DIR_BLOCKS.addTexture(DISPENSER_FRONT_VERTICAL, version);
+		DIR_BLOCKS.addTexture(DRAGON_EGG, version);
+		DIR_BLOCKS.addTexture(DRIED_KELP_BOTTOM, version);
+		DIR_BLOCKS.addTexture(DRIED_KELP_SIDE, version);
+		DIR_BLOCKS.addTexture(DRIED_KELP_TOP, version);
+		DIR_BLOCKS.addTexture(DROPPER_FRONT, version);
+		DIR_BLOCKS.addTexture(DROPPER_FRONT_VERTICAL, version);
+		DIR_BLOCKS.addTexture(EMERALD_BLOCK, version);
+		DIR_BLOCKS.addTexture(EMERALD_ORE, version);
+		DIR_BLOCKS.addTexture(ENCHANTING_TABLE_BOTTOM, version);
+		DIR_BLOCKS.addTexture(ENCHANTING_TABLE_SIDE, version);
+		DIR_BLOCKS.addTexture(ENCHANTING_TABLE_TOP, version);
+		DIR_BLOCKS.addTexture(END_PORTAL_FRAME_EYE, version);
+		DIR_BLOCKS.addTexture(END_PORTAL_FRAME_SIDE, version);
+		DIR_BLOCKS.addTexture(END_PORTAL_FRAME_TOP, version);
+		DIR_BLOCKS.addTexture(END_ROD, version);
+		DIR_BLOCKS.addTexture(END_STONE, version);
+		DIR_BLOCKS.addTexture(END_STONE_BRICKS, version);
+		DIR_BLOCKS.addTexture(FARMLAND, version);
+		DIR_BLOCKS.addTexture(FARMLAND_MOIST, version);
+		DIR_BLOCKS.addTexture(FERN, version);
+		DIR_BLOCKS.addTexture(FIRE_0, version);
+		DIR_BLOCKS.addTexture(FIRE_1, version);
+		DIR_BLOCKS.addTexture(FIRE_CORAL, version);
+		DIR_BLOCKS.addTexture(FIRE_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(FIRE_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(FLOWER_POT, version);
+		DIR_BLOCKS.addTexture(FROSTED_ICE_0, version);
+		DIR_BLOCKS.addTexture(FROSTED_ICE_1, version);
+		DIR_BLOCKS.addTexture(FROSTED_ICE_2, version);
+		DIR_BLOCKS.addTexture(FROSTED_ICE_3, version);
+		DIR_BLOCKS.addTexture(FURNACE_FRONT, version);
+		DIR_BLOCKS.addTexture(FURNACE_FRONT_ON, version);
+		DIR_BLOCKS.addTexture(FURNACE_SIDE, version);
+		DIR_BLOCKS.addTexture(FURNACE_TOP, version);
+		DIR_BLOCKS.addTexture(GLASS, version);
+		DIR_BLOCKS.addTexture(GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(GLOWSTONE, version);
+		DIR_BLOCKS.addTexture(GOLD_BLOCK, version);
+		DIR_BLOCKS.addTexture(GOLD_ORE, version);
+		DIR_BLOCKS.addTexture(GRANITE, version);
+		DIR_BLOCKS.addTexture(GRASS, version);
+		DIR_BLOCKS.addTexture(GRASS_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(GRASS_BLOCK_SIDE_OVERLAY, version);
+		DIR_BLOCKS.addTexture(GRASS_BLOCK_SNOW, version);
+		DIR_BLOCKS.addTexture(GRASS_BLOCK_TOP, version);
+		DIR_BLOCKS.addTexture(GRASS_PATH_SIDE, version);
+		DIR_BLOCKS.addTexture(GRASS_PATH_TOP, version);
+		DIR_BLOCKS.addTexture(GRAVEL, version);
+		DIR_BLOCKS.addTexture(GRAY_CONCRETE, version);
+		DIR_BLOCKS.addTexture(GRAY_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(GRAY_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(GRAY_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(GRAY_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(GRAY_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(GRAY_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(GRAY_WOOL, version);
+		DIR_BLOCKS.addTexture(GREEN_CONCRETE, version);
+		DIR_BLOCKS.addTexture(GREEN_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(GREEN_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(GREEN_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(GREEN_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(GREEN_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(GREEN_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(GREEN_WOOL, version);
+		DIR_BLOCKS.addTexture(HAY_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(HAY_BLOCK_TOP, version);
+		DIR_BLOCKS.addTexture(HOPPER_INSIDE, version);
+		DIR_BLOCKS.addTexture(HOPPER_OUTSIDE, version);
+		DIR_BLOCKS.addTexture(HOPPER_TOP, version);
+		DIR_BLOCKS.addTexture(HORN_CORAL, version);
+		DIR_BLOCKS.addTexture(HORN_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(HORN_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(ICE, version);
+		DIR_BLOCKS.addTexture(IRON_BARS, version);
+		DIR_BLOCKS.addTexture(IRON_BLOCK, version);
+		DIR_BLOCKS.addTexture(IRON_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(IRON_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(IRON_ORE, version);
+		DIR_BLOCKS.addTexture(IRON_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(ITEM_FRAME, version);
+		DIR_BLOCKS.addTexture(JACK_O_LANTERN, version);
+		DIR_BLOCKS.addTexture(JUKEBOX_SIDE, version);
+		DIR_BLOCKS.addTexture(JUKEBOX_TOP, version);
+		DIR_BLOCKS.addTexture(JUNGLE_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(JUNGLE_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(JUNGLE_LEAVES, version);
+		DIR_BLOCKS.addTexture(JUNGLE_LOG, version);
+		DIR_BLOCKS.addTexture(JUNGLE_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(JUNGLE_PLANKS, version);
+		DIR_BLOCKS.addTexture(JUNGLE_SAPLING, version);
+		DIR_BLOCKS.addTexture(JUNGLE_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(KELP, version);
+		DIR_BLOCKS.addTexture(KELP_PLANT, version);
+		DIR_BLOCKS.addTexture(LADDER, version);
+		DIR_BLOCKS.addTexture(LAPIS_BLOCK, version);
+		DIR_BLOCKS.addTexture(LAPIS_ORE, version);
+		DIR_BLOCKS.addTexture(LARGE_FERN_BOTTOM, version);
+		DIR_BLOCKS.addTexture(LARGE_FERN_TOP, version);
+		DIR_BLOCKS.addTexture(LAVA_FLOW, version);
+		DIR_BLOCKS.addTexture(LAVA_STILL, version);
+		DIR_BLOCKS.addTexture(LEVER, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_CONCRETE, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(LIGHT_BLUE_WOOL, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_CONCRETE, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(LIGHT_GRAY_WOOL, version);
+		DIR_BLOCKS.addTexture(LILAC_BOTTOM, version);
+		DIR_BLOCKS.addTexture(LILAC_TOP, version);
+		DIR_BLOCKS.addTexture(LILY_PAD, version);
+		DIR_BLOCKS.addTexture(LIME_CONCRETE, version);
+		DIR_BLOCKS.addTexture(LIME_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(LIME_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(LIME_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(LIME_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(LIME_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(LIME_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(LIME_WOOL, version);
+		DIR_BLOCKS.addTexture(MAGENTA_CONCRETE, version);
+		DIR_BLOCKS.addTexture(MAGENTA_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(MAGENTA_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(MAGENTA_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(MAGENTA_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(MAGENTA_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(MAGENTA_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(MAGENTA_WOOL, version);
+		DIR_BLOCKS.addTexture(MAGMA, version);
+		DIR_BLOCKS.addTexture(MELON_SIDE, version);
+		DIR_BLOCKS.addTexture(MELON_STEM, version);
+		DIR_BLOCKS.addTexture(MELON_TOP, version);
+		DIR_BLOCKS.addTexture(MOSSY_COBBLESTONE, version);
+		DIR_BLOCKS.addTexture(MOSSY_STONE_BRICKS, version);
+		DIR_BLOCKS.addTexture(MUSHROOM_BLOCK_INSIDE, version);
+		DIR_BLOCKS.addTexture(MUSHROOM_STEM, version);
+		DIR_BLOCKS.addTexture(MYCELIUM_SIDE, version);
+		DIR_BLOCKS.addTexture(MYCELIUM_TOP, version);
+		DIR_BLOCKS.addTexture(NETHER_BRICKS, version);
+		DIR_BLOCKS.addTexture(NETHER_PORTAL, version);
+		DIR_BLOCKS.addTexture(NETHER_QUARTZ_ORE, version);
+		DIR_BLOCKS.addTexture(NETHER_WART_BLOCK, version);
+		DIR_BLOCKS.addTexture(NETHER_WART_STAGE0, version);
+		DIR_BLOCKS.addTexture(NETHER_WART_STAGE1, version);
+		DIR_BLOCKS.addTexture(NETHER_WART_STAGE2, version);
+		DIR_BLOCKS.addTexture(NETHERRACK, version);
+		DIR_BLOCKS.addTexture(NOTE_BLOCK, version);
+		DIR_BLOCKS.addTexture(OAK_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(OAK_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(OAK_LEAVES, version);
+		DIR_BLOCKS.addTexture(OAK_LOG, version);
+		DIR_BLOCKS.addTexture(OAK_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(OAK_PLANKS, version);
+		DIR_BLOCKS.addTexture(OAK_SAPLING, version);
+		DIR_BLOCKS.addTexture(OAK_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(OBSERVER_BACK, version);
+		DIR_BLOCKS.addTexture(OBSERVER_BACK_ON, version);
+		DIR_BLOCKS.addTexture(OBSERVER_FRONT, version);
+		DIR_BLOCKS.addTexture(OBSERVER_SIDE, version);
+		DIR_BLOCKS.addTexture(OBSERVER_TOP, version);
+		DIR_BLOCKS.addTexture(OBSIDIAN, version);
+		DIR_BLOCKS.addTexture(ORANGE_CONCRETE, version);
+		DIR_BLOCKS.addTexture(ORANGE_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(ORANGE_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(ORANGE_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(ORANGE_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(ORANGE_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(ORANGE_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(ORANGE_TULIP, version);
+		DIR_BLOCKS.addTexture(ORANGE_WOOL, version);
+		DIR_BLOCKS.addTexture(OXEYE_DAISY, version);
+		DIR_BLOCKS.addTexture(PACKED_ICE, version);
+		DIR_BLOCKS.addTexture(PEONY_BOTTOM, version);
+		DIR_BLOCKS.addTexture(PEONY_TOP, version);
+		DIR_BLOCKS.addTexture(PINK_CONCRETE, version);
+		DIR_BLOCKS.addTexture(PINK_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(PINK_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(PINK_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(PINK_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(PINK_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(PINK_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(PINK_TULIP, version);
+		DIR_BLOCKS.addTexture(PINK_WOOL, version);
+		DIR_BLOCKS.addTexture(PISTON_BOTTOM, version);
+		DIR_BLOCKS.addTexture(PISTON_INNER, version);
+		DIR_BLOCKS.addTexture(PISTON_SIDE, version);
+		DIR_BLOCKS.addTexture(PISTON_TOP, version);
+		DIR_BLOCKS.addTexture(PISTON_TOP_STICKY, version);
+		DIR_BLOCKS.addTexture(PODZOL_SIDE, version);
+		DIR_BLOCKS.addTexture(PODZOL_TOP, version);
+		DIR_BLOCKS.addTexture(POLISHED_ANDESITE, version);
+		DIR_BLOCKS.addTexture(POLISHED_DIORITE, version);
+		DIR_BLOCKS.addTexture(POLISHED_GRANITE, version);
+		DIR_BLOCKS.addTexture(POPPY, version);
+		DIR_BLOCKS.addTexture(POTATOES_STAGE0, version);
+		DIR_BLOCKS.addTexture(POTATOES_STAGE1, version);
+		DIR_BLOCKS.addTexture(POTATOES_STAGE2, version);
+		DIR_BLOCKS.addTexture(POTATOES_STAGE3, version);
+		DIR_BLOCKS.addTexture(POWERED_RAIL, version);
+		DIR_BLOCKS.addTexture(POWERED_RAIL_ON, version);
+		DIR_BLOCKS.addTexture(PRISMARINE, version);
+		DIR_BLOCKS.addTexture(PRISMARINE_BRICKS, version);
+		DIR_BLOCKS.addTexture(PUMPKIN_SIDE, version);
+		DIR_BLOCKS.addTexture(PUMPKIN_STEM, version);
+		DIR_BLOCKS.addTexture(PUMPKIN_TOP, version);
+		DIR_BLOCKS.addTexture(PURPLE_CONCRETE, version);
+		DIR_BLOCKS.addTexture(PURPLE_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(PURPLE_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(PURPLE_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(PURPLE_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(PURPLE_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(PURPLE_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(PURPLE_WOOL, version);
+		DIR_BLOCKS.addTexture(PURPUR_BLOCK, version);
+		DIR_BLOCKS.addTexture(PURPUR_PILLAR, version);
+		DIR_BLOCKS.addTexture(PURPUR_PILLAR_TOP, version);
+		DIR_BLOCKS.addTexture(QUARTZ_BLOCK_BOTTOM, version);
+		DIR_BLOCKS.addTexture(QUARTZ_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(QUARTZ_BLOCK_TOP, version);
+		DIR_BLOCKS.addTexture(QUARTZ_PILLAR, version);
+		DIR_BLOCKS.addTexture(QUARTZ_PILLAR_TOP, version);
+		DIR_BLOCKS.addTexture(RAIL, version);
+		DIR_BLOCKS.addTexture(RAIL_CORNER, version);
+		DIR_BLOCKS.addTexture(RED_CONCRETE, version);
+		DIR_BLOCKS.addTexture(RED_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(RED_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(RED_MUSHROOM, version);
+		DIR_BLOCKS.addTexture(RED_MUSHROOM_BLOCK, version);
+		DIR_BLOCKS.addTexture(RED_NETHER_BRICKS, version);
+		DIR_BLOCKS.addTexture(RED_SAND, version);
+		DIR_BLOCKS.addTexture(RED_SANDSTONE, version);
+		DIR_BLOCKS.addTexture(RED_SANDSTONE_BOTTOM, version);
+		DIR_BLOCKS.addTexture(RED_SANDSTONE_TOP, version);
+		DIR_BLOCKS.addTexture(RED_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(RED_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(RED_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(RED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(RED_TULIP, version);
+		DIR_BLOCKS.addTexture(RED_WOOL, version);
+		DIR_BLOCKS.addTexture(REDSTONE_BLOCK, version);
+		DIR_BLOCKS.addTexture(REDSTONE_DUST_DOT, version);
+		DIR_BLOCKS.addTexture(REDSTONE_DUST_LINE0, version);
+		DIR_BLOCKS.addTexture(REDSTONE_DUST_LINE1, version);
+		DIR_BLOCKS.addTexture(REDSTONE_DUST_OVERLAY, version);
+		DIR_BLOCKS.addTexture(REDSTONE_LAMP, version);
+		DIR_BLOCKS.addTexture(REDSTONE_LAMP_ON, version);
+		DIR_BLOCKS.addTexture(REDSTONE_ORE, version);
+		DIR_BLOCKS.addTexture(REDSTONE_TORCH, version);
+		DIR_BLOCKS.addTexture(REDSTONE_TORCH_OFF, version);
+		DIR_BLOCKS.addTexture(REPEATER, version);
+		DIR_BLOCKS.addTexture(REPEATER_ON, version);
+		DIR_BLOCKS.addTexture(REPEATING_COMMAND_BLOCK_BACK, version);
+		DIR_BLOCKS.addTexture(REPEATING_COMMAND_BLOCK_CONDITIONAL, version);
+		DIR_BLOCKS.addTexture(REPEATING_COMMAND_BLOCK_FRONT, version);
+		DIR_BLOCKS.addTexture(REPEATING_COMMAND_BLOCK_SIDE, version);
+		DIR_BLOCKS.addTexture(ROSE_BUSH_BOTTOM, version);
+		DIR_BLOCKS.addTexture(ROSE_BUSH_TOP, version);
+		DIR_BLOCKS.addTexture(SAND, version);
+		DIR_BLOCKS.addTexture(SANDSTONE, version);
+		DIR_BLOCKS.addTexture(SANDSTONE_BOTTOM, version);
+		DIR_BLOCKS.addTexture(SANDSTONE_TOP, version);
+		DIR_BLOCKS.addTexture(SEA_LANTERN, version);
+		DIR_BLOCKS.addTexture(SEA_PICKLE, version);
+		DIR_BLOCKS.addTexture(SEAGRASS, version);
+		DIR_BLOCKS.addTexture(SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(SLIME_BLOCK, version);
+		DIR_BLOCKS.addTexture(SNOW, version);
+		DIR_BLOCKS.addTexture(SOUL_SAND, version);
+		DIR_BLOCKS.addTexture(SPAWNER, version);
+		DIR_BLOCKS.addTexture(SPONGE, version);
+		DIR_BLOCKS.addTexture(SPRUCE_DOOR_BOTTOM, version);
+		DIR_BLOCKS.addTexture(SPRUCE_DOOR_TOP, version);
+		DIR_BLOCKS.addTexture(SPRUCE_LEAVES, version);
+		DIR_BLOCKS.addTexture(SPRUCE_LOG, version);
+		DIR_BLOCKS.addTexture(SPRUCE_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(SPRUCE_PLANKS, version);
+		DIR_BLOCKS.addTexture(SPRUCE_SAPLING, version);
+		DIR_BLOCKS.addTexture(SPRUCE_TRAPDOOR, version);
+		DIR_BLOCKS.addTexture(STONE, version);
+		DIR_BLOCKS.addTexture(STONE_BRICKS, version);
+		DIR_BLOCKS.addTexture(STONE_SLAB_SIDE, version);
+		DIR_BLOCKS.addTexture(STONE_SLAB_TOP, version);
+		DIR_BLOCKS.addTexture(STRIPPED_ACACIA_LOG, version);
+		DIR_BLOCKS.addTexture(STRIPPED_ACACIA_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(STRIPPED_BIRCH_LOG, version);
+		DIR_BLOCKS.addTexture(STRIPPED_BIRCH_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(STRIPPED_DARK_OAK_LOG, version);
+		DIR_BLOCKS.addTexture(STRIPPED_DARK_OAK_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(STRIPPED_JUNGLE_LOG, version);
+		DIR_BLOCKS.addTexture(STRIPPED_JUNGLE_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(STRIPPED_OAK_LOG, version);
+		DIR_BLOCKS.addTexture(STRIPPED_OAK_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(STRIPPED_SPRUCE_LOG, version);
+		DIR_BLOCKS.addTexture(STRIPPED_SPRUCE_LOG_TOP, version);
+		DIR_BLOCKS.addTexture(STRUCTURE_BLOCK, version);
+		DIR_BLOCKS.addTexture(STRUCTURE_BLOCK_CORNER, version);
+		DIR_BLOCKS.addTexture(STRUCTURE_BLOCK_DATA, version);
+		DIR_BLOCKS.addTexture(STRUCTURE_BLOCK_LOAD, version);
+		DIR_BLOCKS.addTexture(STRUCTURE_BLOCK_SAVE, version);
+		DIR_BLOCKS.addTexture(SUGAR_CANE, version);
+		DIR_BLOCKS.addTexture(SUNFLOWER_BACK, version);
+		DIR_BLOCKS.addTexture(SUNFLOWER_BOTTOM, version);
+		DIR_BLOCKS.addTexture(SUNFLOWER_FRONT, version);
+		DIR_BLOCKS.addTexture(SUNFLOWER_TOP, version);
+		DIR_BLOCKS.addTexture(TALL_GRASS_BOTTOM, version);
+		DIR_BLOCKS.addTexture(TALL_GRASS_TOP, version);
+		DIR_BLOCKS.addTexture(TALL_SEAGRASS_BOTTOM, version);
+		DIR_BLOCKS.addTexture(TALL_SEAGRASS_TOP, version);
+		DIR_BLOCKS.addTexture(TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(TNT_BOTTOM, version);
+		DIR_BLOCKS.addTexture(TNT_SIDE, version);
+		DIR_BLOCKS.addTexture(TNT_TOP, version);
+		DIR_BLOCKS.addTexture(TORCH, version);
+		DIR_BLOCKS.addTexture(TRIPWIRE, version);
+		DIR_BLOCKS.addTexture(TRIPWIRE_HOOK, version);
+		DIR_BLOCKS.addTexture(TUBE_CORAL, version);
+		DIR_BLOCKS.addTexture(TUBE_CORAL_BLOCK, version);
+		DIR_BLOCKS.addTexture(TUBE_CORAL_FAN, version);
+		DIR_BLOCKS.addTexture(TURTLE_EGG, version);
+		DIR_BLOCKS.addTexture(TURTLE_EGG_SLIGHTLY_CRACKED, version);
+		DIR_BLOCKS.addTexture(TURTLE_EGG_VERY_CRACKED, version);
+		DIR_BLOCKS.addTexture(VINE, version);
+		DIR_BLOCKS.addTexture(WATER_FLOW, version);
+		DIR_BLOCKS.addTexture(WATER_OVERLAY, version);
+		DIR_BLOCKS.addTexture(WATER_STILL, version);
+		DIR_BLOCKS.addTexture(WET_SPONGE, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE0, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE1, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE2, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE3, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE4, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE5, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE6, version);
+		DIR_BLOCKS.addTexture(WHEAT_STAGE7, version);
+		DIR_BLOCKS.addTexture(WHITE_CONCRETE, version);
+		DIR_BLOCKS.addTexture(WHITE_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(WHITE_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(WHITE_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(WHITE_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(WHITE_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(WHITE_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(WHITE_TULIP, version);
+		DIR_BLOCKS.addTexture(WHITE_WOOL, version);
+		DIR_BLOCKS.addTexture(YELLOW_CONCRETE, version);
+		DIR_BLOCKS.addTexture(YELLOW_CONCRETE_POWDER, version);
+		DIR_BLOCKS.addTexture(YELLOW_GLAZED_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(YELLOW_SHULKER_BOX, version);
+		DIR_BLOCKS.addTexture(YELLOW_STAINED_GLASS, version);
+		DIR_BLOCKS.addTexture(YELLOW_STAINED_GLASS_PANE_TOP, version);
+		DIR_BLOCKS.addTexture(YELLOW_TERRACOTTA, version);
+		DIR_BLOCKS.addTexture(YELLOW_WOOL, version);
+		
+		DIR_COLORMAPS.addTexture(FOLIAGE, version);
+		DIR_COLORMAPS.addTexture(GRASS, version);
+		
+		DIR_EFFECTS.addTexture(DITHER, version);
+		
+		DIR_ENTITIES.addTexture(ALEX, version);
+		DIR_ENTITIES.addTexture(ARMORSTAND_WOOD, version);
+		DIR_ENTITIES.addTexture(ARROW, version);
+		DIR_ENTITIES.addTexture(BANNER_BASE, version);
+		DIR_ENTITIES.addTexture(BANNER_BORDER, version);
+		DIR_ENTITIES.addTexture(BANNER_BRICKS, version);
+		DIR_ENTITIES.addTexture(BANNER_CIRCLE, version);
+		DIR_ENTITIES.addTexture(BANNER_CREEPER, version);
+		DIR_ENTITIES.addTexture(BANNER_CROSS, version);
+		DIR_ENTITIES.addTexture(BANNER_CURLY_BORDER, version);
+		DIR_ENTITIES.addTexture(BANNER_DIAGONAL_LEFT, version);
+		DIR_ENTITIES.addTexture(BANNER_DIAGONAL_RIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_DIAGONAL_UP_LEFT, version);
+		DIR_ENTITIES.addTexture(BANNER_DIAGONAL_UP_RIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_FLOWER, version);
+		DIR_ENTITIES.addTexture(BANNER_GRADIENT, version);
+		DIR_ENTITIES.addTexture(BANNER_GRADIENT_UP, version);
+		DIR_ENTITIES.addTexture(BANNER_HALF_HORIZONTAL, version);
+		DIR_ENTITIES.addTexture(BANNER_HALF_HORIZONTAL_BOTTOM, version);
+		DIR_ENTITIES.addTexture(BANNER_HALF_VERTICAL, version);
+		DIR_ENTITIES.addTexture(BANNER_HALF_VERTICAL_RIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_MOJANG, version);
+		DIR_ENTITIES.addTexture(BANNER_RHOMBUS, version);
+		DIR_ENTITIES.addTexture(BANNER_SKULL, version);
+		DIR_ENTITIES.addTexture(BANNER_SMALL_STRIPES, version);
+		DIR_ENTITIES.addTexture(BANNER_SQUARE_BOTTOM_LEFT, version);
+		DIR_ENTITIES.addTexture(BANNER_SQUARE_BOTTOM_RIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_SQUARE_TOP_LEFT, version);
+		DIR_ENTITIES.addTexture(BANNER_SQUARE_TOP_RIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_STRAIGHT_CROSS, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_BOTTOM, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_CENTER, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_DOWNLEFT, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_DOWNRIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_LEFT, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_MIDDLE, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_RIGHT, version);
+		DIR_ENTITIES.addTexture(BANNER_STRIPE_TOP, version);
+		DIR_ENTITIES.addTexture(BANNER_TRIANGLE_BOTTOM, version);
+		DIR_ENTITIES.addTexture(BANNER_TRIANGLE_TOP, version);
+		DIR_ENTITIES.addTexture(BANNER_TRIANGLES_BOTTOM, version);
+		DIR_ENTITIES.addTexture(BANNER_TRIANGLES_TOP, version);
+		DIR_ENTITIES.addTexture(BANNER_BASE, version);
+		DIR_ENTITIES.addTexture(BAT, version);
+		DIR_ENTITIES.addTexture(BEACON_BEAM, version);
+		DIR_ENTITIES.addTexture(BEAR_POLARBEAR, version);
+		DIR_ENTITIES.addTexture(BED_BLACK, version);
+		DIR_ENTITIES.addTexture(BED_BLUE, version);
+		DIR_ENTITIES.addTexture(BED_BROWN, version);
+		DIR_ENTITIES.addTexture(BED_CYAN, version);
+		DIR_ENTITIES.addTexture(BED_GRAY, version);
+		DIR_ENTITIES.addTexture(BED_GREEN, version);
+		DIR_ENTITIES.addTexture(BED_LIGHT_BLUE, version);
+		DIR_ENTITIES.addTexture(BED_LIGHT_GRAY, version);
+		DIR_ENTITIES.addTexture(BED_LIME, version);
+		DIR_ENTITIES.addTexture(BED_MAGENTA, version);
+		DIR_ENTITIES.addTexture(BED_ORANGE, version);
+		DIR_ENTITIES.addTexture(BED_PINK, version);
+		DIR_ENTITIES.addTexture(BED_PURPLE, version);
+		DIR_ENTITIES.addTexture(BED_RED, version);
+		DIR_ENTITIES.addTexture(BED_WHITE, version);
+		DIR_ENTITIES.addTexture(BED_YELLOW, version);
+		DIR_ENTITIES.addTexture(BLAZE, version);
+		DIR_ENTITIES.addTexture(BOAT_ACACIA, version);
+		DIR_ENTITIES.addTexture(BOAT_BIRCH, version);
+		DIR_ENTITIES.addTexture(BOAT_DARK_OAK, version);
+		DIR_ENTITIES.addTexture(BOAT_JUNGLE, version);
+		DIR_ENTITIES.addTexture(BOAT_OAK, version);
+		DIR_ENTITIES.addTexture(BOAT_SPRUCE, version);
+		DIR_ENTITIES.addTexture(CAT_BLACK, version);
+		DIR_ENTITIES.addTexture(CAT_OCELOT, version);
+		DIR_ENTITIES.addTexture(CAT_RED, version);
+		DIR_ENTITIES.addTexture(CAT_SIAMESE, version);
+		DIR_ENTITIES.addTexture(CHEST_CHRISTMAS, version);
+		DIR_ENTITIES.addTexture(CHEST_CHRISTMAS_DOUBLE, version);
+		DIR_ENTITIES.addTexture(CHEST_ENDER, version);
+		DIR_ENTITIES.addTexture(CHEST_NORMAL, version);
+		DIR_ENTITIES.addTexture(CHEST_NORMAL_DOUBLE, version);
+		DIR_ENTITIES.addTexture(CHEST_TRAPPED, version);
+		DIR_ENTITIES.addTexture(CHEST_TRAPPED_DOUBLE, version);
+		DIR_ENTITIES.addTexture(CHICKEN, version);
+		DIR_ENTITIES.addTexture(CONDUIT_BASE, version);
+		DIR_ENTITIES.addTexture(CONDUIT_BREAK_PARTICLE, version);
+		DIR_ENTITIES.addTexture(CONDUIT_CAGE, version);
+		DIR_ENTITIES.addTexture(CONDUIT_CLOSED_EYE, version);
+		DIR_ENTITIES.addTexture(CONDUIT_OPEN_EYE, version);
+		DIR_ENTITIES.addTexture(CONDUIT_WIND, version);
+		DIR_ENTITIES.addTexture(CONDUIT_WIND_VERTICAL, version);
+		DIR_ENTITIES.addTexture(COW_COW, version);
+		DIR_ENTITIES.addTexture(COW_MOOSHROOM, version);
+		DIR_ENTITIES.addTexture(CREEPER_CREEPER, version);
+		DIR_ENTITIES.addTexture(CREEPER_CREEPER_ARMOR, version);
+		DIR_ENTITIES.addTexture(DOLPHIN, version);
+		DIR_ENTITIES.addTexture(ELYTRA, version);
+		DIR_ENTITIES.addTexture(ENCHANTING_TABLE_BOOK, version);
+		DIR_ENTITIES.addTexture(END_CRYSTAL_END_CRYSTAL, version);
+		DIR_ENTITIES.addTexture(END_CRYSTAL_END_CRYSTAL_BEAM, version);
+		DIR_ENTITIES.addTexture(END_GATEWAY_BEAM, version);
+		DIR_ENTITIES.addTexture(END_PORTAL, version);
+		DIR_ENTITIES.addTexture(ENDERDRAGON_DRAGON, version);
+		DIR_ENTITIES.addTexture(ENDERDRAGON_DRAGON_EXPLODING, version);
+		DIR_ENTITIES.addTexture(ENDERDRAGON_DRAGON_EYES, version);
+		DIR_ENTITIES.addTexture(ENDERDRAGON_DRAGON_FIREBALL, version);
+		DIR_ENTITIES.addTexture(ENDERMAN_ENDERMAN, version);
+		DIR_ENTITIES.addTexture(ENDERMAN_ENDERMAN_EYES, version);
+		DIR_ENTITIES.addTexture(ENDERMITE, version);
+		DIR_ENTITIES.addTexture(EXPERIENCE_ORB, version);
+		DIR_ENTITIES.addTexture(EXPLOSION, version);
+		DIR_ENTITIES.addTexture(FISH_COD, version);
+		DIR_ENTITIES.addTexture(FISH_PUFFERFISH, version);
+		DIR_ENTITIES.addTexture(FISH_SALMON, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A_PATTERN_1, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A_PATTERN_2, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A_PATTERN_3, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A_PATTERN_4, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A_PATTERN_5, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_A_PATTERN_6, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B_PATTERN_1, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B_PATTERN_2, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B_PATTERN_3, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B_PATTERN_4, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B_PATTERN_5, version);
+		DIR_ENTITIES.addTexture(FISH_TROPICAL_B_PATTERN_6, version);
+		DIR_ENTITIES.addTexture(GHAST_GHAST, version);
+		DIR_ENTITIES.addTexture(GHAST_GHAST_SHOOTING, version);
+		DIR_ENTITIES.addTexture(GUARDIAN, version);
+		DIR_ENTITIES.addTexture(GUARDIAN_BEAM, version);
+		DIR_ENTITIES.addTexture(GUARDIAN_ELDER, version);
+		DIR_ENTITIES.addTexture(HORSE_ARMOR_HORSE_ARMOR_DIAMOND, version);
+		DIR_ENTITIES.addTexture(HORSE_ARMOR_HORSE_ARMOR_GOLD, version);
+		DIR_ENTITIES.addTexture(HORSE_ARMOR_HORSE_ARMOR_IRON, version);
+		DIR_ENTITIES.addTexture(HORSE_DONKEY, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_BLACK, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_BROWN, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_CHESTNUT, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_CREAMY, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_DARKBROWN, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_GRAY, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_MARKINGS_BLACKDOTS, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_MARKINGS_WHITE, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_MARKINGS_WHITEDOTS, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_MARKINGS_WHITEFIELD, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_SKELETON, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_WHITE, version);
+		DIR_ENTITIES.addTexture(HORSE_HORSE_ZOMBIE, version);
+		DIR_ENTITIES.addTexture(HORSE_MULE, version);
+		DIR_ENTITIES.addTexture(ILLAGER_EVOKER, version);
+		DIR_ENTITIES.addTexture(ILLAGER_EVOKER_FANGS, version);
+		DIR_ENTITIES.addTexture(ILLAGER_ILLUSIONER, version);
+		DIR_ENTITIES.addTexture(ILLAGER_VEX, version);
+		DIR_ENTITIES.addTexture(ILLAGER_VEX_CHARGING, version);
+		DIR_ENTITIES.addTexture(ILLAGER_VINDICATOR, version);
+		DIR_ENTITIES.addTexture(IRON_GOLEM, version);
+		DIR_ENTITIES.addTexture(LEAD_KNOT, version);
+		DIR_ENTITIES.addTexture(LLAMA_BROWN, version);
+		DIR_ENTITIES.addTexture(LLAMA_CREAMY, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_BLACK, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_BLUE, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_BROWN, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_CYAN, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_GRAY, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_GREEN, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_LIGHT_BLUE, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_LIGHT_GRAY, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_LIME, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_MAGENTA, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_ORANGE, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_PINK, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_PURPLE, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_RED, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_WHITE, version);
+		DIR_ENTITIES.addTexture(LLAMA_DECOR_YELLOW, version);
+		DIR_ENTITIES.addTexture(LLAMA_GRAY, version);
+		DIR_ENTITIES.addTexture(LLAMA_SPIT, version);
+		DIR_ENTITIES.addTexture(LLAMA_WHITE, version);
+		DIR_ENTITIES.addTexture(MINECART, version);
+		DIR_ENTITIES.addTexture(PARROT_PARROT_BLUE, version);
+		DIR_ENTITIES.addTexture(PARROT_PARROT_GREEN, version);
+		DIR_ENTITIES.addTexture(PARROT_PARROT_GREY, version);
+		DIR_ENTITIES.addTexture(PARROT_PARROT_RED_BLUE, version);
+		DIR_ENTITIES.addTexture(PARROT_PARROT_YELLOW_BLUE, version);
+		DIR_ENTITIES.addTexture(PHANTOM, version);
+		DIR_ENTITIES.addTexture(PHANTOM_EYES, version);
+		DIR_ENTITIES.addTexture(PIG_PIG, version);
+		DIR_ENTITIES.addTexture(PIG_PIG_SADDLE, version);
+		DIR_ENTITIES.addTexture(PROJECTILES_ARROW, version);
+		DIR_ENTITIES.addTexture(PROJECTILES_SPECTRAL_ARROW, version);
+		DIR_ENTITIES.addTexture(PROJECTILES_TIPPED_ARROW, version);
+		DIR_ENTITIES.addTexture(RABBIT_BLACK, version);
+		DIR_ENTITIES.addTexture(RABBIT_BROWN, version);
+		DIR_ENTITIES.addTexture(RABBIT_CAERBANNOG, version);
+		DIR_ENTITIES.addTexture(RABBIT_GOLD, version);
+		DIR_ENTITIES.addTexture(RABBIT_SALT, version);
+		DIR_ENTITIES.addTexture(RABBIT_TOAST, version);
+		DIR_ENTITIES.addTexture(RABBIT_WHITE, version);
+		DIR_ENTITIES.addTexture(RABBIT_WHITE_SPLOTCHED, version);
+		DIR_ENTITIES.addTexture(SHEEP_SHEEP, version);
+		DIR_ENTITIES.addTexture(SHEEP_SHEEP_FUR, version);
+		DIR_ENTITIES.addTexture(SHIELD_BASE, version);
+		DIR_ENTITIES.addTexture(SHIELD_BORDER, version);
+		DIR_ENTITIES.addTexture(SHIELD_BRICKS, version);
+		DIR_ENTITIES.addTexture(SHIELD_CIRCLE, version);
+		DIR_ENTITIES.addTexture(SHIELD_CREEPER, version);
+		DIR_ENTITIES.addTexture(SHIELD_CROSS, version);
+		DIR_ENTITIES.addTexture(SHIELD_CURLY_BORDER, version);
+		DIR_ENTITIES.addTexture(SHIELD_DIAGONAL_LEFT, version);
+		DIR_ENTITIES.addTexture(SHIELD_DIAGONAL_RIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_DIAGONAL_UP_LEFT, version);
+		DIR_ENTITIES.addTexture(SHIELD_DIAGONAL_UP_RIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_FLOWER, version);
+		DIR_ENTITIES.addTexture(SHIELD_GRADIENT, version);
+		DIR_ENTITIES.addTexture(SHIELD_GRADIENT_UP, version);
+		DIR_ENTITIES.addTexture(SHIELD_HALF_HORIZONTAL, version);
+		DIR_ENTITIES.addTexture(SHIELD_HALF_HORIZONTAL_BOTTOM, version);
+		DIR_ENTITIES.addTexture(SHIELD_HALF_VERTICAL, version);
+		DIR_ENTITIES.addTexture(SHIELD_HALF_VERTICAL_RIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_MOJANG, version);
+		DIR_ENTITIES.addTexture(SHIELD_RHOMBUS, version);
+		DIR_ENTITIES.addTexture(SHIELD_SKULL, version);
+		DIR_ENTITIES.addTexture(SHIELD_SMALL_STRIPES, version);
+		DIR_ENTITIES.addTexture(SHIELD_SQUARE_BOTTOM_LEFT, version);
+		DIR_ENTITIES.addTexture(SHIELD_SQUARE_BOTTOM_RIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_SQUARE_TOP_LEFT, version);
+		DIR_ENTITIES.addTexture(SHIELD_SQUARE_TOP_RIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRAIGHT_CROSS, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_BOTTOM, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_CENTER, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_DOWNLEFT, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_DOWNRIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_LEFT, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_MIDDLE, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_RIGHT, version);
+		DIR_ENTITIES.addTexture(SHIELD_STRIPE_TOP, version);
+		DIR_ENTITIES.addTexture(SHIELD_TRIANGLE_BOTTOM, version);
+		DIR_ENTITIES.addTexture(SHIELD_TRIANGLE_TOP, version);
+		DIR_ENTITIES.addTexture(SHIELD_TRIANGLES_BOTTOM, version);
+		DIR_ENTITIES.addTexture(SHIELD_TRIANGLES_TOP, version);
+		DIR_ENTITIES.addTexture(SHIELD_BASE, version);
+		DIR_ENTITIES.addTexture(SHIELD_BASE_NOPATTERN, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_BLACK, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_BLUE, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_BROWN, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_CYAN, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_GRAY, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_GREEN, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_LIGHT_BLUE, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_LIGHT_GRAY, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_LIME, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_MAGENTA, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_ORANGE, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_PINK, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_PURPLE, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_RED, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_WHITE, version);
+		DIR_ENTITIES.addTexture(SHULKER_SHULKER_YELLOW, version);
+		DIR_ENTITIES.addTexture(SHULKER_SPARK, version);
+		DIR_ENTITIES.addTexture(SIGN, version);
+		DIR_ENTITIES.addTexture(SILVERFISH, version);
+		DIR_ENTITIES.addTexture(SKELETON_SKELETON, version);
+		DIR_ENTITIES.addTexture(SKELETON_STRAY, version);
+		DIR_ENTITIES.addTexture(SKELETON_STRAY_OVERLAY, version);
+		DIR_ENTITIES.addTexture(SKELETON_WITHER_SKELETON, version);
+		DIR_ENTITIES.addTexture(SLIME_MAGMACUBE, version);
+		DIR_ENTITIES.addTexture(SLIME_SLIME, version);
+		DIR_ENTITIES.addTexture(SNOW_GOLEM, version);
+		DIR_ENTITIES.addTexture(SPIDER_CAVE_SPIDER, version);
+		DIR_ENTITIES.addTexture(SPIDER_SPIDER, version);
+		DIR_ENTITIES.addTexture(SPIDER_EYES, version);
+		DIR_ENTITIES.addTexture(SQUID, version);
+		DIR_ENTITIES.addTexture(STEVE, version);
+		DIR_ENTITIES.addTexture(SWEEP, version);
+		DIR_ENTITIES.addTexture(TRIDENT, version);
+		DIR_ENTITIES.addTexture(TRIDENT_RIPTIDE, version);
+		DIR_ENTITIES.addTexture(TURTLE_BIG_SEA_TURTLE, version);
+		DIR_ENTITIES.addTexture(VILLAGER_BUTCHER, version);
+		DIR_ENTITIES.addTexture(VILLAGER_FARMER, version);
+		DIR_ENTITIES.addTexture(VILLAGER_LIBRARIAN, version);
+		DIR_ENTITIES.addTexture(VILLAGER_PRIEST, version);
+		DIR_ENTITIES.addTexture(VILLAGER_SMITH, version);
+		DIR_ENTITIES.addTexture(VILLAGER_VILLAGER, version);
+		DIR_ENTITIES.addTexture(WITCH, version);
+		DIR_ENTITIES.addTexture(WITHER_WITHER, version);
+		DIR_ENTITIES.addTexture(WITHER_WITHER_ARMOR, version);
+		DIR_ENTITIES.addTexture(WITHER_WITHER_INVULNERABLE, version);
+		DIR_ENTITIES.addTexture(WOLF_WOLF, version);
+		DIR_ENTITIES.addTexture(WOLF_WOLF_ANGRY, version);
+		DIR_ENTITIES.addTexture(WOLF_WOLF_COLLAR, version);
+		DIR_ENTITIES.addTexture(WOLF_WOLF_TAME, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_DROWNED, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_DROWNED_OUTER_LAYER, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_HUSK, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_ZOMBIE, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_ZOMBIE_VILLAGER, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_PIGMAN, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_VILLAGER_ZOMBIE_BUTCHER, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_VILLAGER_ZOMBIE_FARMER, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_VILLAGER_ZOMBIE_LIBRARIAN, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_VILLAGER_ZOMBIE_PRIEST, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_VILLAGER_ZOMBIE_SMITH, version);
+		DIR_ENTITIES.addTexture(ZOMBIE_VILLAGER_ZOMBIE_VILLAGER, version);
+		
+		DIR_ENVIRONMENT.addTexture(CLOUDS, version);
+		DIR_ENVIRONMENT.addTexture(END_SKY, version);
+		DIR_ENVIRONMENT.addTexture(MOON_PHASES, version);
+		DIR_ENVIRONMENT.addTexture(RAIN, version);
+		DIR_ENVIRONMENT.addTexture(SNOW, version);
+		DIR_ENVIRONMENT.addTexture(SUN, version);
+		
+		DIR_GUIS.addTexture(ADVANCEMENTS_BACKGROUNDS_ADVENTURE, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_BACKGROUNDS_END, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_BACKGROUNDS_HUSBANDRY, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_BACKGROUNDS_NETHER, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_BACKGROUNDS_STONE, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_TABS, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_WIDGETS, version);
+		DIR_GUIS.addTexture(ADVANCEMENTS_WINDOW, version);
+		DIR_GUIS.addTexture(BARS, version);
+		DIR_GUIS.addTexture(BOOK, version);
+		DIR_GUIS.addTexture(CONTAINER_ANVIL, version);
+		DIR_GUIS.addTexture(CONTAINER_BEACON, version);
+		DIR_GUIS.addTexture(CONTAINER_BREWING_STAND, version);
+		DIR_GUIS.addTexture(CONTAINER_CRAFTING_TABLE, version);
+		DIR_GUIS.addTexture(CONTAINER_CREATIVE_INVENTORY_TAB_INVENTORY, version);
+		DIR_GUIS.addTexture(CONTAINER_CREATIVE_INVENTORY_TAB_ITEM_SEARCH, version);
+		DIR_GUIS.addTexture(CONTAINER_CREATIVE_INVENTORY_TAB_ITEMS, version);
+		DIR_GUIS.addTexture(CONTAINER_CREATIVE_INVENTORY_TABS, version);
+		DIR_GUIS.addTexture(CONTAINER_DISPENSER, version);
+		DIR_GUIS.addTexture(CONTAINER_ENCHANTING_TABLE, version);
+		DIR_GUIS.addTexture(CONTAINER_FURNACE, version);
+		DIR_GUIS.addTexture(CONTAINER_GENERIC_54, version);
+		DIR_GUIS.addTexture(CONTAINER_HOPPER, version);
+		DIR_GUIS.addTexture(CONTAINER_HORSE, version);
+		DIR_GUIS.addTexture(CONTAINER_INVENTORY, version);
+		DIR_GUIS.addTexture(CONTAINER_SHULKER_BOX, version);
+		DIR_GUIS.addTexture(CONTAINER_STATS_ICONS, version);
+		DIR_GUIS.addTexture(CONTAINER_VILLAGER, version);
+		DIR_GUIS.addTexture(DEMO_BACKGROUND, version);
+		DIR_GUIS.addTexture(ICONS, version);
+		DIR_GUIS.addTexture(OPTIONS_BACKGROUND, version);
+		DIR_GUIS.addTexture(PRESETS_CHAOS, version);
+		DIR_GUIS.addTexture(PRESETS_DELIGHT, version);
+		DIR_GUIS.addTexture(PRESETS_DROUGHT, version);
+		DIR_GUIS.addTexture(PRESETS_ISLES, version);
+		DIR_GUIS.addTexture(PRESETS_LUCK, version);
+		DIR_GUIS.addTexture(PRESETS_MADNESS, version);
+		DIR_GUIS.addTexture(PRESETS_WATER, version);
+		DIR_GUIS.addTexture(RECIPE_BOOK, version);
+		DIR_GUIS.addTexture(RECIPE_BUTTON, version);
+		DIR_GUIS.addTexture(RESOURCE_PACKS, version);
+		DIR_GUIS.addTexture(SERVER_SELECTION, version);
+		DIR_GUIS.addTexture(SPECTATOR_WIDGETS, version);
+		DIR_GUIS.addTexture(STREAM_INDICATOR, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_0, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_1, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_2, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_3, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_4, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_5, version);
+		DIR_GUIS.addTexture(TITLE_BACKGROUND_PANORAMA_OVERLAY, version);
+		DIR_GUIS.addTexture(TITLE_EDITION, version);
+		DIR_GUIS.addTexture(TITLE_MINECRAFT, version);
+		DIR_GUIS.addTexture(TITLE_MOJANG, version);
+		DIR_GUIS.addTexture(TOASTS, version);
+		DIR_GUIS.addTexture(WIDGETS, version);
+		DIR_GUIS.addTexture(WORLD_SELECTION, version);
+		
+		DIR_ITEMS.addTexture(ACACIA_BOAT, version);
+		DIR_ITEMS.addTexture(ACACIA_DOOR, version);
+		DIR_ITEMS.addTexture(APPLE, version);
+		DIR_ITEMS.addTexture(ARMOR_STAND, version);
+		DIR_ITEMS.addTexture(ARROW, version);
+		DIR_ITEMS.addTexture(BAKED_POTATO, version);
+		DIR_ITEMS.addTexture(BARRIER, version);
+		DIR_ITEMS.addTexture(BEEF, version);
+		DIR_ITEMS.addTexture(BEETROOT, version);
+		DIR_ITEMS.addTexture(BEETROOT_SEEDS, version);
+		DIR_ITEMS.addTexture(BEETROOT_SOUP, version);
+		DIR_ITEMS.addTexture(BIRCH_BOAT, version);
+		DIR_ITEMS.addTexture(BIRCH_DOOR, version);
+		DIR_ITEMS.addTexture(BLAZE_POWDER, version);
+		DIR_ITEMS.addTexture(BLAZE_ROD, version);
+		DIR_ITEMS.addTexture(BONE, version);
+		DIR_ITEMS.addTexture(BONE_MEAL, version);
+		DIR_ITEMS.addTexture(BOOK, version);
+		DIR_ITEMS.addTexture(BOW, version);
+		DIR_ITEMS.addTexture(BOW_PULLING_0, version);
+		DIR_ITEMS.addTexture(BOW_PULLING_1, version);
+		DIR_ITEMS.addTexture(BOW_PULLING_2, version);
+		DIR_ITEMS.addTexture(BOWL, version);
+		DIR_ITEMS.addTexture(BREAD, version);
+		DIR_ITEMS.addTexture(BREWING_STAND, version);
+		DIR_ITEMS.addTexture(BRICK, version);
+		DIR_ITEMS.addTexture(BROKEN_ELYTRA, version);
+		DIR_ITEMS.addTexture(BUCKET, version);
+		DIR_ITEMS.addTexture(CACTUS_GREEN, version);
+		DIR_ITEMS.addTexture(CAKE, version);
+		DIR_ITEMS.addTexture(CARROT, version);
+		DIR_ITEMS.addTexture(CARROT_ON_A_STICK, version);
+		DIR_ITEMS.addTexture(CAULDRON, version);
+		DIR_ITEMS.addTexture(CHAINMAIL_BOOTS, version);
+		DIR_ITEMS.addTexture(CHAINMAIL_CHESTPLATE, version);
+		DIR_ITEMS.addTexture(CHAINMAIL_HELMET, version);
+		DIR_ITEMS.addTexture(CHAINMAIL_LEGGINGS, version);
+		DIR_ITEMS.addTexture(CHARCOAL, version);
+		DIR_ITEMS.addTexture(CHEST_MINECART, version);
+		DIR_ITEMS.addTexture(CHICKEN, version);
+		DIR_ITEMS.addTexture(CHORUS_FRUIT, version);
+		DIR_ITEMS.addTexture(CLAY_BALL, version);
+		DIR_ITEMS.addTexture(CLOCK_00, version);
+		DIR_ITEMS.addTexture(CLOCK_01, version);
+		DIR_ITEMS.addTexture(CLOCK_02, version);
+		DIR_ITEMS.addTexture(CLOCK_03, version);
+		DIR_ITEMS.addTexture(CLOCK_04, version);
+		DIR_ITEMS.addTexture(CLOCK_05, version);
+		DIR_ITEMS.addTexture(CLOCK_06, version);
+		DIR_ITEMS.addTexture(CLOCK_07, version);
+		DIR_ITEMS.addTexture(CLOCK_08, version);
+		DIR_ITEMS.addTexture(CLOCK_09, version);
+		DIR_ITEMS.addTexture(CLOCK_10, version);
+		DIR_ITEMS.addTexture(CLOCK_11, version);
+		DIR_ITEMS.addTexture(CLOCK_12, version);
+		DIR_ITEMS.addTexture(CLOCK_13, version);
+		DIR_ITEMS.addTexture(CLOCK_14, version);
+		DIR_ITEMS.addTexture(CLOCK_15, version);
+		DIR_ITEMS.addTexture(CLOCK_16, version);
+		DIR_ITEMS.addTexture(CLOCK_17, version);
+		DIR_ITEMS.addTexture(CLOCK_18, version);
+		DIR_ITEMS.addTexture(CLOCK_19, version);
+		DIR_ITEMS.addTexture(CLOCK_20, version);
+		DIR_ITEMS.addTexture(CLOCK_21, version);
+		DIR_ITEMS.addTexture(CLOCK_22, version);
+		DIR_ITEMS.addTexture(CLOCK_23, version);
+		DIR_ITEMS.addTexture(CLOCK_24, version);
+		DIR_ITEMS.addTexture(CLOCK_25, version);
+		DIR_ITEMS.addTexture(CLOCK_26, version);
+		DIR_ITEMS.addTexture(CLOCK_27, version);
+		DIR_ITEMS.addTexture(CLOCK_28, version);
+		DIR_ITEMS.addTexture(CLOCK_29, version);
+		DIR_ITEMS.addTexture(CLOCK_30, version);
+		DIR_ITEMS.addTexture(CLOCK_31, version);
+		DIR_ITEMS.addTexture(CLOCK_32, version);
+		DIR_ITEMS.addTexture(CLOCK_33, version);
+		DIR_ITEMS.addTexture(CLOCK_34, version);
+		DIR_ITEMS.addTexture(CLOCK_35, version);
+		DIR_ITEMS.addTexture(CLOCK_36, version);
+		DIR_ITEMS.addTexture(CLOCK_37, version);
+		DIR_ITEMS.addTexture(CLOCK_38, version);
+		DIR_ITEMS.addTexture(CLOCK_39, version);
+		DIR_ITEMS.addTexture(CLOCK_40, version);
+		DIR_ITEMS.addTexture(CLOCK_41, version);
+		DIR_ITEMS.addTexture(CLOCK_42, version);
+		DIR_ITEMS.addTexture(CLOCK_43, version);
+		DIR_ITEMS.addTexture(CLOCK_44, version);
+		DIR_ITEMS.addTexture(CLOCK_45, version);
+		DIR_ITEMS.addTexture(CLOCK_46, version);
+		DIR_ITEMS.addTexture(CLOCK_47, version);
+		DIR_ITEMS.addTexture(CLOCK_48, version);
+		DIR_ITEMS.addTexture(CLOCK_49, version);
+		DIR_ITEMS.addTexture(CLOCK_50, version);
+		DIR_ITEMS.addTexture(CLOCK_51, version);
+		DIR_ITEMS.addTexture(CLOCK_52, version);
+		DIR_ITEMS.addTexture(CLOCK_53, version);
+		DIR_ITEMS.addTexture(CLOCK_54, version);
+		DIR_ITEMS.addTexture(CLOCK_55, version);
+		DIR_ITEMS.addTexture(CLOCK_56, version);
+		DIR_ITEMS.addTexture(CLOCK_57, version);
+		DIR_ITEMS.addTexture(CLOCK_58, version);
+		DIR_ITEMS.addTexture(CLOCK_59, version);
+		DIR_ITEMS.addTexture(CLOCK_60, version);
+		DIR_ITEMS.addTexture(CLOCK_61, version);
+		DIR_ITEMS.addTexture(CLOCK_62, version);
+		DIR_ITEMS.addTexture(CLOCK_63, version);
+		DIR_ITEMS.addTexture(COAL, version);
+		DIR_ITEMS.addTexture(COCOA_BEANS, version);
+		DIR_ITEMS.addTexture(COD, version);
+		DIR_ITEMS.addTexture(COD_BUCKET, version);
+		DIR_ITEMS.addTexture(COMMAND_BLOCK_MINECART, version);
+		DIR_ITEMS.addTexture(COMPARATOR, version);
+		DIR_ITEMS.addTexture(COMPASS_00, version);
+		DIR_ITEMS.addTexture(COMPASS_01, version);
+		DIR_ITEMS.addTexture(COMPASS_02, version);
+		DIR_ITEMS.addTexture(COMPASS_03, version);
+		DIR_ITEMS.addTexture(COMPASS_04, version);
+		DIR_ITEMS.addTexture(COMPASS_05, version);
+		DIR_ITEMS.addTexture(COMPASS_06, version);
+		DIR_ITEMS.addTexture(COMPASS_07, version);
+		DIR_ITEMS.addTexture(COMPASS_08, version);
+		DIR_ITEMS.addTexture(COMPASS_09, version);
+		DIR_ITEMS.addTexture(COMPASS_10, version);
+		DIR_ITEMS.addTexture(COMPASS_11, version);
+		DIR_ITEMS.addTexture(COMPASS_12, version);
+		DIR_ITEMS.addTexture(COMPASS_13, version);
+		DIR_ITEMS.addTexture(COMPASS_14, version);
+		DIR_ITEMS.addTexture(COMPASS_15, version);
+		DIR_ITEMS.addTexture(COMPASS_16, version);
+		DIR_ITEMS.addTexture(COMPASS_17, version);
+		DIR_ITEMS.addTexture(COMPASS_18, version);
+		DIR_ITEMS.addTexture(COMPASS_19, version);
+		DIR_ITEMS.addTexture(COMPASS_20, version);
+		DIR_ITEMS.addTexture(COMPASS_21, version);
+		DIR_ITEMS.addTexture(COMPASS_22, version);
+		DIR_ITEMS.addTexture(COMPASS_23, version);
+		DIR_ITEMS.addTexture(COMPASS_24, version);
+		DIR_ITEMS.addTexture(COMPASS_25, version);
+		DIR_ITEMS.addTexture(COMPASS_26, version);
+		DIR_ITEMS.addTexture(COMPASS_27, version);
+		DIR_ITEMS.addTexture(COMPASS_28, version);
+		DIR_ITEMS.addTexture(COMPASS_29, version);
+		DIR_ITEMS.addTexture(COMPASS_30, version);
+		DIR_ITEMS.addTexture(COMPASS_31, version);
+		DIR_ITEMS.addTexture(COOKED_BEEF, version);
+		DIR_ITEMS.addTexture(COOKED_CHICKEN, version);
+		DIR_ITEMS.addTexture(COOKED_COD, version);
+		DIR_ITEMS.addTexture(COOKED_MUTTON, version);
+		DIR_ITEMS.addTexture(COOKED_PORKCHOP, version);
+		DIR_ITEMS.addTexture(COOKED_RABBIT, version);
+		DIR_ITEMS.addTexture(COOKED_SALMON, version);
+		DIR_ITEMS.addTexture(COOKIE, version);
+		DIR_ITEMS.addTexture(CYAN_DYE, version);
+		DIR_ITEMS.addTexture(DANDELION_YELLOW, version);
+		DIR_ITEMS.addTexture(DARK_OAK_BOAT, version);
+		DIR_ITEMS.addTexture(DARK_OAK_DOOR, version);
+		DIR_ITEMS.addTexture(DIAMOND, version);
+		DIR_ITEMS.addTexture(DIAMOND_AXE, version);
+		DIR_ITEMS.addTexture(DIAMOND_BOOTS, version);
+		DIR_ITEMS.addTexture(DIAMOND_CHESTPLATE, version);
+		DIR_ITEMS.addTexture(DIAMOND_HELMET, version);
+		DIR_ITEMS.addTexture(DIAMOND_HOE, version);
+		DIR_ITEMS.addTexture(DIAMOND_HORSE_ARMOR, version);
+		DIR_ITEMS.addTexture(DIAMOND_LEGGINGS, version);
+		DIR_ITEMS.addTexture(DIAMOND_PICKAXE, version);
+		DIR_ITEMS.addTexture(DIAMOND_SHOVEL, version);
+		DIR_ITEMS.addTexture(DIAMOND_SWORD, version);
+		DIR_ITEMS.addTexture(DRAGON_BREATH, version);
+		DIR_ITEMS.addTexture(DRIED_KELP, version);
+		DIR_ITEMS.addTexture(EGG, version);
+		DIR_ITEMS.addTexture(ELYTRA, version);
+		DIR_ITEMS.addTexture(EMERALD, version);
+		DIR_ITEMS.addTexture(EMPTY_ARMOR_SLOT_BOOTS, version);
+		DIR_ITEMS.addTexture(EMPTY_ARMOR_SLOT_CHESTPLATE, version);
+		DIR_ITEMS.addTexture(EMPTY_ARMOR_SLOT_HELMET, version);
+		DIR_ITEMS.addTexture(EMPTY_ARMOR_SLOT_LEGGINGS, version);
+		DIR_ITEMS.addTexture(EMPTY_ARMOR_SLOT_SHIELD, version);
+		DIR_ITEMS.addTexture(ENCHANTED_BOOK, version);
+		DIR_ITEMS.addTexture(END_CRYSTAL, version);
+		DIR_ITEMS.addTexture(ENDER_EYE, version);
+		DIR_ITEMS.addTexture(ENDER_PEARL, version);
+		DIR_ITEMS.addTexture(EXPERIENCE_BOTTLE, version);
+		DIR_ITEMS.addTexture(FEATHER, version);
+		DIR_ITEMS.addTexture(FERMENTED_SPIDER_EYE, version);
+		DIR_ITEMS.addTexture(FILLED_MAP, version);
+		DIR_ITEMS.addTexture(FILLED_MAP_MARKINGS, version);
+		DIR_ITEMS.addTexture(FIRE_CHARGE, version);
+		DIR_ITEMS.addTexture(FIREWORK_ROCKET, version);
+		DIR_ITEMS.addTexture(FIREWORK_STAR, version);
+		DIR_ITEMS.addTexture(FIREWORK_STAR_OVERLAY, version);
+		DIR_ITEMS.addTexture(FISHING_ROD, version);
+		DIR_ITEMS.addTexture(FISHING_ROD_CAST, version);
+		DIR_ITEMS.addTexture(FLINT, version);
+		DIR_ITEMS.addTexture(FLINT_AND_STEEL, version);
+		DIR_ITEMS.addTexture(FLOWER_POT, version);
+		DIR_ITEMS.addTexture(FURNACE_MINECART, version);
+		DIR_ITEMS.addTexture(GHAST_TEAR, version);
+		DIR_ITEMS.addTexture(GLASS_BOTTLE, version);
+		DIR_ITEMS.addTexture(GLISTERING_MELON_SLICE, version);
+		DIR_ITEMS.addTexture(GLOWSTONE_DUST, version);
+		DIR_ITEMS.addTexture(GOLD_INGOT, version);
+		DIR_ITEMS.addTexture(GOLD_NUGGET, version);
+		DIR_ITEMS.addTexture(GOLDEN_APPLE, version);
+		DIR_ITEMS.addTexture(GOLDEN_AXE, version);
+		DIR_ITEMS.addTexture(GOLDEN_BOOTS, version);
+		DIR_ITEMS.addTexture(GOLDEN_CARROT, version);
+		DIR_ITEMS.addTexture(GOLDEN_CHESTPLATE, version);
+		DIR_ITEMS.addTexture(GOLDEN_HELMET, version);
+		DIR_ITEMS.addTexture(GOLDEN_HOE, version);
+		DIR_ITEMS.addTexture(GOLDEN_HORSE_ARMOR, version);
+		DIR_ITEMS.addTexture(GOLDEN_LEGGINGS, version);
+		DIR_ITEMS.addTexture(GOLDEN_PICKAXE, version);
+		DIR_ITEMS.addTexture(GOLDEN_SHOVEL, version);
+		DIR_ITEMS.addTexture(GOLDEN_SWORD, version);
+		DIR_ITEMS.addTexture(GRAY_DYE, version);
+		DIR_ITEMS.addTexture(GUNPOWDER, version);
+		DIR_ITEMS.addTexture(HEART_OF_THE_SEA, version);
+		DIR_ITEMS.addTexture(HOPPER, version);
+		DIR_ITEMS.addTexture(HOPPER_MINECART, version);
+		DIR_ITEMS.addTexture(INK_SAC, version);
+		DIR_ITEMS.addTexture(IRON_AXE, version);
+		DIR_ITEMS.addTexture(IRON_BOOTS, version);
+		DIR_ITEMS.addTexture(IRON_CHESTPLATE, version);
+		DIR_ITEMS.addTexture(IRON_DOOR, version);
+		DIR_ITEMS.addTexture(IRON_HELMET, version);
+		DIR_ITEMS.addTexture(IRON_HOE, version);
+		DIR_ITEMS.addTexture(IRON_HORSE_ARMOR, version);
+		DIR_ITEMS.addTexture(IRON_INGOT, version);
+		DIR_ITEMS.addTexture(IRON_LEGGINGS, version);
+		DIR_ITEMS.addTexture(IRON_NUGGET, version);
+		DIR_ITEMS.addTexture(IRON_PICKAXE, version);
+		DIR_ITEMS.addTexture(IRON_SHOVEL, version);
+		DIR_ITEMS.addTexture(IRON_SWORD, version);
+		DIR_ITEMS.addTexture(ITEM_FRAME, version);
+		DIR_ITEMS.addTexture(JUNGLE_BOAT, version);
+		DIR_ITEMS.addTexture(JUNGLE_DOOR, version);
+		DIR_ITEMS.addTexture(KELP, version);
+		DIR_ITEMS.addTexture(KNOWLEDGE_BOOK, version);
+		DIR_ITEMS.addTexture(LAPIS_LAZULI, version);
+		DIR_ITEMS.addTexture(LAVA_BUCKET, version);
+		DIR_ITEMS.addTexture(LEAD, version);
+		DIR_ITEMS.addTexture(LEATHER, version);
+		DIR_ITEMS.addTexture(LEATHER_BOOTS, version);
+		DIR_ITEMS.addTexture(LEATHER_BOOTS_OVERLAY, version);
+		DIR_ITEMS.addTexture(LEATHER_CHESTPLATE, version);
+		DIR_ITEMS.addTexture(LEATHER_CHESTPLATE_OVERLAY, version);
+		DIR_ITEMS.addTexture(LEATHER_HELMET, version);
+		DIR_ITEMS.addTexture(LEATHER_HELMET_OVERLAY, version);
+		DIR_ITEMS.addTexture(LEATHER_LEGGINGS, version);
+		DIR_ITEMS.addTexture(LEATHER_LEGGINGS_OVERLAY, version);
+		DIR_ITEMS.addTexture(LIGHT_BLUE_DYE, version);
+		DIR_ITEMS.addTexture(LIGHT_GRAY_DYE, version);
+		DIR_ITEMS.addTexture(LIME_DYE, version);
+		DIR_ITEMS.addTexture(LINGERING_POTION, version);
+		DIR_ITEMS.addTexture(MAGENTA_DYE, version);
+		DIR_ITEMS.addTexture(MAGMA_CREAM, version);
+		DIR_ITEMS.addTexture(MAP, version);
+		DIR_ITEMS.addTexture(MELON_SEEDS, version);
+		DIR_ITEMS.addTexture(MELON_SLICE, version);
+		DIR_ITEMS.addTexture(MILK_BUCKET, version);
+		DIR_ITEMS.addTexture(MINECART, version);
+		DIR_ITEMS.addTexture(MUSHROOM_STEW, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_11, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_13, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_BLOCKS, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_CAT, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_CHIRP, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_FAR, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_MALL, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_MELLOHI, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_STAL, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_STRAD, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_WAIT, version);
+		DIR_ITEMS.addTexture(MUSIC_DISC_WARD, version);
+		DIR_ITEMS.addTexture(MUTTON, version);
+		DIR_ITEMS.addTexture(NAME_TAG, version);
+		DIR_ITEMS.addTexture(NAUTILUS_SHELL, version);
+		DIR_ITEMS.addTexture(NETHER_BRICK, version);
+		DIR_ITEMS.addTexture(NETHER_STAR, version);
+		DIR_ITEMS.addTexture(NETHER_WART, version);
+		DIR_ITEMS.addTexture(OAK_BOAT, version);
+		DIR_ITEMS.addTexture(OAK_DOOR, version);
+		DIR_ITEMS.addTexture(ORANGE_DYE, version);
+		DIR_ITEMS.addTexture(PAINTING, version);
+		DIR_ITEMS.addTexture(PAPER, version);
+		DIR_ITEMS.addTexture(PHANTOM_MEMBRANE, version);
+		DIR_ITEMS.addTexture(PINK_DYE, version);
+		DIR_ITEMS.addTexture(POISONOUS_POTATO, version);
+		DIR_ITEMS.addTexture(POPPED_CHORUS_FRUIT, version);
+		DIR_ITEMS.addTexture(PORKCHOP, version);
+		DIR_ITEMS.addTexture(POTATO, version);
+		DIR_ITEMS.addTexture(POTION, version);
+		DIR_ITEMS.addTexture(POTION_OVERLAY, version);
+		DIR_ITEMS.addTexture(PRISMARINE_CRYSTALS, version);
+		DIR_ITEMS.addTexture(PRISMARINE_SHARD, version);
+		DIR_ITEMS.addTexture(PUFFERFISH, version);
+		DIR_ITEMS.addTexture(PUFFERFISH_BUCKET, version);
+		DIR_ITEMS.addTexture(PUMPKIN_PIE, version);
+		DIR_ITEMS.addTexture(PUMPKIN_SEEDS, version);
+		DIR_ITEMS.addTexture(PURPLE_DYE, version);
+		DIR_ITEMS.addTexture(QUARTZ, version);
+		DIR_ITEMS.addTexture(RABBIT, version);
+		DIR_ITEMS.addTexture(RABBIT_FOOT, version);
+		DIR_ITEMS.addTexture(RABBIT_HIDE, version);
+		DIR_ITEMS.addTexture(RABBIT_STEW, version);
+		DIR_ITEMS.addTexture(REDSTONE, version);
+		DIR_ITEMS.addTexture(REPEATER, version);
+		DIR_ITEMS.addTexture(ROSE_RED, version);
+		DIR_ITEMS.addTexture(ROTTEN_FLESH, version);
+		DIR_ITEMS.addTexture(RUBY, version);
+		DIR_ITEMS.addTexture(SADDLE, version);
+		DIR_ITEMS.addTexture(SALMON, version);
+		DIR_ITEMS.addTexture(SALMON_BUCKET, version);
+		DIR_ITEMS.addTexture(SCUTE, version);
+		DIR_ITEMS.addTexture(SEA_PICKLE, version);
+		DIR_ITEMS.addTexture(SEAGRASS, version);
+		DIR_ITEMS.addTexture(SHEARS, version);
+		DIR_ITEMS.addTexture(SHULKER_SHELL, version);
+		DIR_ITEMS.addTexture(SIGN, version);
+		DIR_ITEMS.addTexture(SLIME_BALL, version);
+		DIR_ITEMS.addTexture(SNOWBALL, version);
+		DIR_ITEMS.addTexture(SPAWN_EGG, version);
+		DIR_ITEMS.addTexture(SPAWN_EGG_OVERLAY, version);
+		DIR_ITEMS.addTexture(SPECTRAL_ARROW, version);
+		DIR_ITEMS.addTexture(SPIDER_EYE, version);
+		DIR_ITEMS.addTexture(SPLASH_POTION, version);
+		DIR_ITEMS.addTexture(SPRUCE_BOAT, version);
+		DIR_ITEMS.addTexture(SPRUCE_DOOR, version);
+		DIR_ITEMS.addTexture(STICK, version);
+		DIR_ITEMS.addTexture(STONE_AXE, version);
+		DIR_ITEMS.addTexture(STONE_HOE, version);
+		DIR_ITEMS.addTexture(STONE_PICKAXE, version);
+		DIR_ITEMS.addTexture(STONE_SHOVEL, version);
+		DIR_ITEMS.addTexture(STONE_SWORD, version);
+		DIR_ITEMS.addTexture(STRING, version);
+		DIR_ITEMS.addTexture(STRUCTURE_VOID, version);
+		DIR_ITEMS.addTexture(SUGAR, version);
+		DIR_ITEMS.addTexture(SUGAR_CANE, version);
+		DIR_ITEMS.addTexture(TIPPED_ARROW_BASE, version);
+		DIR_ITEMS.addTexture(TIPPED_ARROW_HEAD, version);
+		DIR_ITEMS.addTexture(TNT_MINECART, version);
+		DIR_ITEMS.addTexture(TOTEM_OF_UNDYING, version);
+		DIR_ITEMS.addTexture(TRIDENT, version);
+		DIR_ITEMS.addTexture(TROPICAL_FISH, version);
+		DIR_ITEMS.addTexture(TROPICAL_FISH_BUCKET, version);
+		DIR_ITEMS.addTexture(TURTLE_EGG, version);
+		DIR_ITEMS.addTexture(TURTLE_HELMET, version);
+		DIR_ITEMS.addTexture(WATER_BUCKET, version);
+		DIR_ITEMS.addTexture(WHEAT, version);
+		DIR_ITEMS.addTexture(WHEAT_SEEDS, version);
+		DIR_ITEMS.addTexture(WOODEN_AXE, version);
+		DIR_ITEMS.addTexture(WOODEN_HOE, version);
+		DIR_ITEMS.addTexture(WOODEN_PICKAXE, version);
+		DIR_ITEMS.addTexture(WOODEN_SHOVEL, version);
+		DIR_ITEMS.addTexture(WOODEN_SWORD, version);
+		DIR_ITEMS.addTexture(WRITABLE_BOOK, version);
+		DIR_ITEMS.addTexture(WRITTEN_BOOK, version);
+		
+		DIR_MAP.addTexture(MAP_BACKGROUND, version);
+		DIR_MAP.addTexture(MAP_ICONS, version);
+		
+		DIR_MISC.addTexture(ENCHANTED_ITEM_GLINT, version);
+		DIR_MISC.addTexture(FORCEFIELD, version);
+		DIR_MISC.addTexture(PUMPKINBLUR, version);
+		DIR_MISC.addTexture(SHADOW, version);
+		DIR_MISC.addTexture(UNDERWATER, version);
+		DIR_MISC.addTexture(UNKNOWN_PACK, version);
+		DIR_MISC.addTexture(UNKNOWN_SERVER, version);
+		DIR_MISC.addTexture(VIGNETTE, version);
+		
+		DIR_MODELS.addTexture(ARMOR_CHAINMAIL_LAYER_1, version);
+		DIR_MODELS.addTexture(ARMOR_CHAINMAIL_LAYER_2, version);
+		DIR_MODELS.addTexture(ARMOR_DIAMOND_LAYER_1, version);
+		DIR_MODELS.addTexture(ARMOR_DIAMOND_LAYER_2, version);
+		DIR_MODELS.addTexture(ARMOR_GOLD_LAYER_1, version);
+		DIR_MODELS.addTexture(ARMOR_GOLD_LAYER_2, version);
+		DIR_MODELS.addTexture(ARMOR_IRON_LAYER_1, version);
+		DIR_MODELS.addTexture(ARMOR_IRON_LAYER_2, version);
+		DIR_MODELS.addTexture(ARMOR_LEATHER_LAYER_1, version);
+		DIR_MODELS.addTexture(ARMOR_LEATHER_LAYER_1_OVERLAY, version);
+		DIR_MODELS.addTexture(ARMOR_LEATHER_LAYER_2, version);
+		DIR_MODELS.addTexture(ARMOR_LEATHER_LAYER_2_OVERLAY, version);
+		DIR_MODELS.addTexture(ARMOR_TURTLE_LAYER_1, version);
+		
+		DIR_PAINTINGS.addTexture(PAINTINGS_KRISTOFFER_ZETTERSTRAND, version);
+		
+		DIR_PARTICLES.addTexture(FOOTPRINT, version);
+		DIR_PARTICLES.addTexture(PARTICLES, version);
 	}
 }

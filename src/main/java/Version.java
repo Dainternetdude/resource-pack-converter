@@ -1,3 +1,7 @@
+/**
+ * lowest supported version always extends this
+ * & they all extend each other all the way up
+ */
 public abstract class Version {
 	
 	public int version;
@@ -1394,7 +1398,7 @@ public abstract class Version {
 	//</editor-fold>
 	
 	protected abstract void setupTextures();
-	protected abstract void setupDirectories();
+	protected abstract void setupDirectoryStructure();
 	protected abstract void setupDirectoryContents();
 	
 	public static void setupVersions() {

@@ -4,7 +4,8 @@ public class One13 extends One12 {
 	
 	public One13() {
 		setupTextures();
-		setupDirectories();
+		this.setupDirectoryStructure();
+		setupDirectoryContents();
 	}
 	
 	protected void setupTextures() {
@@ -585,8 +586,8 @@ public class One13 extends One12 {
 		ARMOR_TURTLE_LAYER_1.setName("turtle_layer_1", version);
 	}
 	
-	protected void setupDirectories() {
-		super.setupDirectories();
+	protected void setupDirectoryStructure() {
+		super.setupDirectoryStructure();
 		
 		// setting names
 		DIR_BLOCKS.setName("block", version);
@@ -647,55 +648,51 @@ public class One13 extends One12 {
 		DIR_PARTICLES.setName("particle", version);
 		
 		// setting subdirectories
-		// setting subdirectories
-		DIR_ENTITIES.setSubDirectories(new Directory[]{
-				DIR_ARMORSTAND,
-				DIR_BANNER,
-				DIR_BEARS,
-				DIR_BEDS,
-				DIR_BOATS,
-				DIR_CATS,
-				DIR_CHESTS,
-				DIR_CONDUIT,
-				DIR_COWS,
-				DIR_CREEPER,
-				DIR_END_CRYSTAL,
-				DIR_ENDER_DRAGON,
-				DIR_ENDERMAN,
-				DIR_FISH,
-				DIR_GHAST,
-				DIR_HORSES,
-				DIR_ILLAGERS,
-				DIR_LLAMAS,
-				DIR_PARROTS,
-				DIR_PIG,
-				DIR_PROJECTILES,
-				DIR_RABBITS,
-				DIR_SHEEP,
-				DIR_SHIELD,
-				DIR_SHULKERS,
-				DIR_SKELETONS,
-				DIR_SLIMES,
-				DIR_SPIDERS,
-				DIR_TURTLE,
-				DIR_VILLAGERS,
-				DIR_WITHER,
-				DIR_WOLVES,
-				DIR_ZOMBIES,
-				DIR_ZOMBIE_VILLAGERS
-		}, version);
-		DIR_HORSES.setSubDirectories(new Directory[]{
-				DIR_HORSE_ARMOR
-		}, version);
-		DIR_LLAMAS.setSubDirectories(new Directory[]{
-				DIR_LLAMA_DECOR
-		}, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ARMORSTAND, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BANNER, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BEARS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BEDS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_BOATS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CATS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CHESTS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CONDUIT, version);
+		DIR_ENTITIES.addSubDirectory(DIR_COWS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_CREEPER, version);
+		DIR_ENTITIES.addSubDirectory(DIR_END_CRYSTAL, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ENDER_DRAGON, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ENDERMAN, version);
+		DIR_ENTITIES.addSubDirectory(DIR_FISH, version);
+		DIR_ENTITIES.addSubDirectory(DIR_GHAST, version);
+		DIR_ENTITIES.addSubDirectory(DIR_HORSES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ILLAGERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_LLAMAS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_PARROTS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_PIG, version);
+		DIR_ENTITIES.addSubDirectory(DIR_PROJECTILES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_RABBITS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SHEEP, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SHIELD, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SHULKERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SKELETONS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SLIMES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_SPIDERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_TURTLE, version);
+		DIR_ENTITIES.addSubDirectory(DIR_VILLAGERS, version);
+		DIR_ENTITIES.addSubDirectory(DIR_WITHER, version);
+		DIR_ENTITIES.addSubDirectory(DIR_WOLVES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ZOMBIES, version);
+		DIR_ENTITIES.addSubDirectory(DIR_ZOMBIE_VILLAGERS, version);
 		
-		DIR_GUIS.setSubDirectories(new Directory[]{
-				DIR_ADVANCEMENTS,
-				DIR_CONTAINERS,
-				DIR_PRESETS,
-				DIR_TITLE
-		}, version);
+		DIR_HORSES.addSubDirectory(DIR_HORSE_ARMOR, version);
+		DIR_LLAMAS.addSubDirectory(DIR_LLAMA_DECOR, version);
+		
+		DIR_GUIS.addSubDirectory(DIR_ADVANCEMENTS, version);
+		DIR_GUIS.addSubDirectory(DIR_CONTAINERS, version);
+		DIR_GUIS.addSubDirectory(DIR_PRESETS, version);
+		DIR_GUIS.addSubDirectory(DIR_TITLE, version);
+	}
+	
+	protected void setupDirectoryContents() {
+	
 	}
 }
