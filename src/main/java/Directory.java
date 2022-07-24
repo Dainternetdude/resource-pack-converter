@@ -6,11 +6,11 @@ public class Directory extends File {
     private final ArrayList<Texture>[] textures = (ArrayList<Texture>[]) new ArrayList[UserInterfaceFrame.LATEST_MC_VERSION + 1];
 
     public Directory() {
-        for (ArrayList<Directory> subDirectoryArray : subDirectories) {
-            subDirectoryArray = new ArrayList<>();
+        for (int i = 0; i < subDirectories.length; i++) {
+            subDirectories[i] = new ArrayList<>();
         }
-        for (ArrayList<Texture> textureArray : textures) {
-            textureArray = new ArrayList<>();
+        for (int i = 0; i < textures.length; i++) {
+            textures[i] = new ArrayList<>();
         }
     }
 
@@ -21,20 +21,9 @@ public class Directory extends File {
     public void addSubDirectory(Directory directory, int version) {
         if (directory == null)
             throw new NullPointerException("cannot add directory as it is null!");
-        else
+        else {
+            directory.setParent(this, version);
             subDirectories[version].add(directory);
-    }
-
-    @Deprecated
-    private void setSubDirectories(Directory[] subDirectories, int version) {
-        if (subDirectories != null) {
-            this.subDirectories[version] = subDirectories.clone();
-
-            for (Directory dir : this.subDirectories[version]) {
-                dir.setParent(this, version);
-            }
-        } else {
-            this.subDirectories[version] = null;
         }
     }
 
@@ -42,27 +31,16 @@ public class Directory extends File {
         return !this.subDirectories[version].isEmpty();
     }
 
-    public ArrayList<Texture> getTextures(byte version) {
-        return textures[version].clone();
+    public ArrayList<Texture> getTextures(int version) {
+        return textures[version];
     }
 
     public void addTexture(Texture texture, int version) {
         if (texture == null)
             throw new NullPointerException("cannot add texture as it is null!");
-        else
+        else {
+            texture.setParent(this, version);
             textures[version].add(texture);
-    }
-    
-    @Deprecated
-    private void setTextures(Texture[] textures, int version) {
-        if (textures != null) {
-            this.textures[version] = textures.clone();
-
-            for (Texture texture : this.textures[version]) {
-                texture.setParent(this, version);
-            }
-        } else {
-            this.textures[version] = null;
         }
     }
 }

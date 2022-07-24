@@ -8,16 +8,43 @@ import java.util.*;
  */
 public class Converter {
 
-    private byte sourceVersion;
-    private byte destinationVersion;
+    private int sourceVersion;
+    private int destinationVersion;
+    private File sourceFile;
     //public static final basePath
-
-    public void convert(byte sourceVersion, byte destinationVersion) { //todo take path to file
-        this.sourceVersion = sourceVersion;
-        this.destinationVersion = destinationVersion;
-        convert(Version.TOP_LEVEL_DIRECTORIES);
+    
+    public void setSourceFile(File sf) {
+        if (sf == null)
+            throw new NullPointerException("Source file is null!");
+        else if (!sf.isDirectory())
+            System.out.println("Warning: selected source file is not a directory!");
+        else
+            sourceFile = sf;
     }
-    public void convert(@NotNull Directory dir) {
+    
+    public void setSourceVersion(int sv) {
+        if (sv < UserInterfaceFrame.LOWEST_SUPPORTED_MC_VERSION || sv > UserInterfaceFrame.LATEST_MC_VERSION)
+            throw new RuntimeException("Source version " + sv + " is out of bounds!");
+        else
+            sourceVersion = sv;
+    }
+    
+    public void setDestinationVersion(int dv) {
+        if (dv < UserInterfaceFrame.LOWEST_SUPPORTED_MC_VERSION || dv > UserInterfaceFrame.LATEST_MC_VERSION)
+            throw new RuntimeException("Destination version " + dv + " is out of bounds!");
+        else
+            destinationVersion = dv;
+    }
+
+    public void convert() { //todo take path to file
+        
+        //todo setting up source & dest dirs
+        
+        for (Directory dir : Version.TOP_LEVEL_DIRECTORIES) {
+            convert(dir);
+        }
+    }
+    private void convert(@NotNull Directory dir) {
 
         // convert all textures in the directory dir
         for (Texture texture : dir.getTextures(sourceVersion)) {
@@ -50,12 +77,6 @@ public class Converter {
                     System.out.println("error renaming " + subDir.getName(sourceVersion));
                 }
             }
-        }
-    }
-
-    public void convert(Directory[] dirTree) {
-        for (Directory dir : dirTree) {
-            convert(dir);
         }
     }
 }

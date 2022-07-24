@@ -1402,7 +1402,7 @@ public abstract class Version {
 	protected abstract void setupDirectoryContents();
 	
 	public static void setupVersions() {
-		var one12 = new One12();
-		var one13 = new One13();
+		One12 one12 = new One12();
+		One13 one13 = new One13();
 	}
 }

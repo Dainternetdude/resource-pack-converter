@@ -11,8 +11,8 @@ public class UserInterfaceFrame extends JFrame {
 
     public static final int WIDTH_FRAME = 400;
     public static final int HEIGHT_FRAME = 400;
-    public static final byte LATEST_MC_VERSION = 17;
-    public static final byte LOWEST_SUPPORTED_MC_VERSION = 7;
+    public static final int LATEST_MC_VERSION = 17;
+    public static final int LOWEST_SUPPORTED_MC_VERSION = 7;
 
     private final JPanel panel = new JPanel();
     private final BorderLayout borderLayout = new BorderLayout();
@@ -21,10 +21,8 @@ public class UserInterfaceFrame extends JFrame {
     private final JPanel rightPanel = new JPanel();
     private final GridBagLayout rightGbl = new GridBagLayout();
     private final GridBagConstraints gbc = new GridBagConstraints();
-
-    private byte sourceVersion;
-    private byte destinationVersion;
-    private File sourceFile;
+    
+    private final Converter converter = new Converter();
 
     public UserInterfaceFrame() {
 
@@ -43,32 +41,35 @@ public class UserInterfaceFrame extends JFrame {
         JLabel label2 = new JLabel("Destination Version");
         rightPanel.add(label2, gbc);
 
-        JComboBox comboBox1 = new JComboBox();
-        JComboBox comboBox2 = new JComboBox();
+        JComboBox<String> sourceVersionComboBox = new JComboBox<>();
+        sourceVersionComboBox.addActionListener(e -> {
+            converter.setSourceVersion(LATEST_MC_VERSION - sourceVersionComboBox.getSelectedIndex());
+        });
+        JComboBox<String> destinationVersionComboBox = new JComboBox<>();
+        destinationVersionComboBox.addActionListener(e -> {
+            converter.setDestinationVersion(LATEST_MC_VERSION - destinationVersionComboBox.getSelectedIndex());
+        });
         String[] versions = new String[LATEST_MC_VERSION + 1];
 
         for(int i = LATEST_MC_VERSION; i >= LOWEST_SUPPORTED_MC_VERSION; i--) {
             versions[i] = "1." + i;
-            comboBox1.addItem(versions[i]);
-            comboBox2.addItem(versions[i]);
+            sourceVersionComboBox.addItem(versions[i]);
+            destinationVersionComboBox.addItem(versions[i]);
         }
-        comboBox1.setSelectedIndex(1);  //default the source version to previous version
+        sourceVersionComboBox.setSelectedIndex(1);  //default the source version to previous version
                                         //destination defaults to current version automatically
         gbc.gridy = 1;
-        leftPanel.add(comboBox1, gbc);
-        rightPanel.add(comboBox2, gbc);
+        leftPanel.add(sourceVersionComboBox, gbc);
+        rightPanel.add(destinationVersionComboBox, gbc);
 
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         JButton button1 = new JButton("Choose Folder");
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == button1) {
-                    int returnValue = fileChooser.showOpenDialog(button1);
-                    if(returnValue == JFileChooser.APPROVE_OPTION) {
-                        sourceFile = fileChooser.getSelectedFile();
-                    }
+        button1.addActionListener(e -> {
+            if (e.getSource() == button1) {
+                int returnValue = fileChooser.showOpenDialog(button1);
+                if(returnValue == JFileChooser.APPROVE_OPTION) {
+                    converter.setSourceFile(fileChooser.getSelectedFile());
                 }
             }
         });
@@ -77,14 +78,9 @@ public class UserInterfaceFrame extends JFrame {
 
         JButton convertButton = new JButton("Convert!");
         this.add(convertButton, BorderLayout.SOUTH);
-        convertButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Version.setupVersions();
-                sourceVersion = 12;
-                destinationVersion = 13;
-                new Converter().convert(sourceVersion, destinationVersion); //todo use souceFile & destinationFile
-            }
+        convertButton.addActionListener(e -> {
+            Version.setupVersions();
+            converter.convert();
         });
 
         this.add(panel);
@@ -92,7 +88,7 @@ public class UserInterfaceFrame extends JFrame {
         this.setSize(WIDTH_FRAME, HEIGHT_FRAME);
         this.setMinimumSize(new Dimension(330, 160));
         //this.setResizable(false);
-        this.setTitle("Minecraft Resource Pack converter");
+        this.setTitle("Minecraft Resource Pack Converter");
         this.setType(Type.NORMAL);
         this.setLocation(120, 80);
         this.setVisible(true);
