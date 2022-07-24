@@ -947,7 +947,7 @@ public abstract class Version {
 	public static final Texture BANNER_TRIANGLE_TOP = new Texture();
 	public static final Texture BANNER_TRIANGLES_BOTTOM = new Texture();
 	public static final Texture BANNER_TRIANGLES_TOP = new Texture();
-	public static final Texture BANNER_BASE = new Texture();
+	public static final Texture BANNER_BASE_2 = new Texture();//TODO
 	public static final Texture BAT = new Texture();
 	public static final Texture BEACON_BEAM = new Texture();
 	public static final Texture BEAR_POLARBEAR = new Texture();
@@ -1145,7 +1145,7 @@ public abstract class Version {
 	public static final Texture SHIELD_TRIANGLE_TOP = new Texture();
 	public static final Texture SHIELD_TRIANGLES_BOTTOM = new Texture();
 	public static final Texture SHIELD_TRIANGLES_TOP = new Texture();
-	public static final Texture SHIELD_BASE = new Texture();
+	public static final Texture SHIELD_BASE_2 = new Texture();//TODO
 	public static final Texture SHIELD_BASE_NOPATTERN = new Texture();
 	public static final Texture SHULKER_SHULKER = new Texture();
 	public static final Texture SHULKER_SHULKER_BLACK = new Texture();
@@ -1180,7 +1180,7 @@ public abstract class Version {
 	public static final Texture SQUID = new Texture();
 	public static final Texture STEVE = new Texture();
 	public static final Texture SWEEP = new Texture();
-	public static final Texture TRIDENT = new Texture();
+	public static final Texture TRIDENT_ENTITY = new Texture();//TODO
 	public static final Texture TRIDENT_RIPTIDE = new Texture();
 	public static final Texture TURTLE_BIG_SEA_TURTLE = new Texture();
 	public static final Texture VILLAGER_BUTCHER = new Texture();
@@ -1326,56 +1326,56 @@ public abstract class Version {
 	public static Directory DIR_COLORMAPS = new Directory();
 	public static Directory DIR_EFFECTS = new Directory();
 	public static Directory DIR_ENTITIES = new Directory();
-	public static Directory DIR_ARMORSTAND = new Directory();
-	public static Directory DIR_BANNER = new Directory();
+	public static Directory DIR_ENTITIES_ARMORSTAND = new Directory();
+	public static Directory DIR_ENTITIES_BANNER = new Directory();
 	public static Directory DIR_BEARS = new Directory();
-	public static Directory DIR_BEDS = new Directory();
-	public static Directory DIR_BOATS = new Directory();
+	public static Directory DIR_ENTITIES_BED = new Directory();
+	public static Directory DIR_ENTITIES_BOAT = new Directory();
 	public static Directory DIR_CATS = new Directory();
 	public static Directory DIR_CHESTS = new Directory();
-	public static Directory DIR_CONDUIT = new Directory();
+	public static Directory DIR_ENTITIES_CONDUIT = new Directory();
 	public static Directory DIR_COWS = new Directory();
 	public static Directory DIR_CREEPER = new Directory();
-	public static Directory DIR_END_CRYSTAL = new Directory();
+	public static Directory DIR_ENTITIES_END_CRYSTAL = new Directory();
 	public static Directory DIR_ENDER_DRAGON = new Directory();
 	public static Directory DIR_ENDERMAN = new Directory();
-	public static Directory DIR_FISH = new Directory();
+	public static Directory DIR_ENTITIES_FISH = new Directory();
 	public static Directory DIR_GHAST = new Directory();
 	public static Directory DIR_HORSES = new Directory();
 	public static Directory DIR_HORSE_ARMOR = new Directory();
-	public static Directory DIR_ILLAGERS = new Directory();
-	public static Directory DIR_LLAMAS = new Directory();
-	public static Directory DIR_LLAMA_DECOR = new Directory();
-	public static Directory DIR_PARROTS = new Directory();
+	public static Directory DIR_ENTITIES_ILLAGER = new Directory();
+	public static Directory DIR_ENTITIES_LLAMA = new Directory();
+	public static Directory DIR_ENTITIES_LLAMA_DECOR = new Directory();
+	public static Directory DIR_ENTITIES_PARROT = new Directory();
 	public static Directory DIR_PIG = new Directory();
 	public static Directory DIR_PROJECTILES = new Directory();
 	public static Directory DIR_RABBITS = new Directory();
 	public static Directory DIR_SHEEP = new Directory();
 	public static Directory DIR_SHIELD = new Directory();
-	public static Directory DIR_SHULKERS = new Directory();
+	public static Directory DIR_ENTITIES_SHULKER = new Directory();
 	public static Directory DIR_SKELETONS = new Directory();
 	public static Directory DIR_SLIMES = new Directory();
 	public static Directory DIR_SPIDERS = new Directory();
-	public static Directory DIR_TURTLE = new Directory();
+	public static Directory DIR_ENTITIES_TURTLE = new Directory();
 	public static Directory DIR_VILLAGERS = new Directory();
 	public static Directory DIR_WITHER = new Directory();
 	public static Directory DIR_WOLVES = new Directory();
-	public static Directory DIR_ZOMBIES = new Directory();
+	public static Directory DIR_ENTITIES_ZOMBIE = new Directory();
 	public static Directory DIR_ZOMBIE_VILLAGERS = new Directory();
 	public static Directory DIR_ENVIRONMENT = new Directory();
 	public static Directory DIR_FONT = new Directory();
 	public static Directory DIR_GUIS = new Directory();
-	public static Directory DIR_ADVANCEMENTS = new Directory();
-	public static Directory DIR_ADVANCEMENT_BACKGROUNDS = new Directory();
-	public static Directory DIR_CONTAINERS = new Directory();
+	public static Directory DIR_GUIS_ADVANCEMENTS = new Directory();
+	public static Directory DIR_GUIS_ADVANCEMENTS_BACKGROUNDS = new Directory();
+	public static Directory DIR_GUIS_CONTAINER = new Directory();
 	public static Directory DIR_CONTAINER_CREATIVE_INVENTORY = new Directory();
 	public static Directory DIR_PRESETS = new Directory();
-	public static Directory DIR_TITLE = new Directory();
-	public static Directory DIR_TITLE_BACKGROUND = new Directory();
+	public static Directory DIR_GUIS_TITLE = new Directory();
+	public static Directory DIR_GUIS_TITLE_BACKGROUND = new Directory();
 	public static Directory DIR_ITEMS = new Directory();
 	public static Directory DIR_MAP = new Directory();
 	public static Directory DIR_MISC = new Directory();
-	public static Directory DIR_MODELS = new Directory();
+	public static Directory DIR_MODELS_ARMOR = new Directory();
 	public static Directory DIR_PAINTINGS = new Directory();
 	public static Directory DIR_PARTICLES = new Directory();
 	
@@ -1391,7 +1391,7 @@ public abstract class Version {
 			DIR_ITEMS,
 			DIR_MAP,
 			DIR_MISC,
-			DIR_MODELS,
+			DIR_MODELS_ARMOR,
 			DIR_PAINTINGS,
 			DIR_PARTICLES
 	};
@@ -1402,7 +1402,7 @@ public abstract class Version {
 	protected abstract void setupDirectoryContents();
 	
 	public static void setupVersions() {
-		new One12();
-		new One13();
+		var one12 = new One12();
+		var one13 = new One13();
 	}
 }

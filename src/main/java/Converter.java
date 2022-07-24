@@ -1,9 +1,10 @@
 import org.jetbrains.annotations.*;
 
 import java.io.File;
+import java.util.*;
 
 /**
- * a completely static class who does the actual conversion on a low level
+ * a class who does the actual conversion on a low level
  */
 public class Converter {
 
@@ -16,7 +17,7 @@ public class Converter {
         this.destinationVersion = destinationVersion;
         convert(Version.TOP_LEVEL_DIRECTORIES);
     }
-    public void convert(@Nullable Directory dir) {
+    public void convert(@NotNull Directory dir) {
 
         // convert all textures in the directory dir
         for (Texture texture : dir.getTextures(sourceVersion)) {
@@ -32,7 +33,7 @@ public class Converter {
             }
         }
         if (dir.hasSubDirectories(sourceVersion)) {
-            Directory[] subDirectories = dir.getSubDirectories(sourceVersion);
+            ArrayList<Directory> subDirectories = dir.getSubDirectories(sourceVersion);
             //for each subdirectory in dir
             for (Directory subDir : subDirectories) {
                 //recursively run convert on that subDir
