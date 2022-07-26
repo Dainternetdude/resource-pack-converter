@@ -1,8 +1,12 @@
+package ca.dainternetdude.mappings;
+
+import ca.dainternetdude.filetypes.*;
+
 /**
  * lowest supported version always extends this
  * & they all extend each other all the way up
  */
-public abstract class Version {
+public abstract class Bindings {
 	
 	public int version;
 	
@@ -1319,7 +1323,6 @@ public abstract class Version {
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 	//<editor-fold desc="Directories">
-	public static final String BASE_PATH = "/assets/minecraft/textures/";
 	
 	// Directories
 	public static Directory DIR_BLOCKS = new Directory();

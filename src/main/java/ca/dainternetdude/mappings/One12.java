@@ -1,15 +1,18 @@
-public class One12 extends Version {
+package ca.dainternetdude.mappings;
+
+import static ca.dainternetdude.mappings.Bindings.*;
+
+public class One12 {
 	
-	public int version = 12;
+	public static int version = 12;
 	
-	public One12() {
+	public static void setup() {
 		setupTextures();
 		setupDirectoryStructure();
 		setupDirectoryContents();
 	}
 	
-	protected void setupTextures() {
-		//TODO: super.setupTextures();
+	private static void setupTextures() {
 		
 		//blocks
 		ACACIA_DOOR_BOTTOM.setName("door_acacia_lower", version);
@@ -1214,8 +1217,7 @@ public class One12 extends Version {
 		DIR_PARTICLES.setName("particles", version);
 	}
 	
-	protected void setupDirectoryStructure() {
-		//TODO: super.setupDirectories();
+	private static void setupDirectoryStructure() {
 		
 		// setting names
 		DIR_BLOCKS.setName("blocks", version);
@@ -1321,7 +1323,7 @@ public class One12 extends Version {
 		DIR_GUIS_TITLE.addSubDirectory(DIR_GUIS_TITLE_BACKGROUND, version);
 	}
 	
-	protected void setupDirectoryContents() {
+	private static void setupDirectoryContents() {
 		DIR_BLOCKS.addTexture(BLACK_CONCRETE, version);
 		DIR_BLOCKS.addTexture(BLUE_CONCRETE, version);
 		DIR_BLOCKS.addTexture(BROWN_CONCRETE, version);

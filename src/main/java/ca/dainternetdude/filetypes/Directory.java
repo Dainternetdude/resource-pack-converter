@@ -1,9 +1,13 @@
+package ca.dainternetdude.filetypes;
+
+import ca.dainternetdude.*;
+
 import java.util.*;
 
 public class Directory extends File {
 
-    private final ArrayList<Directory>[] subDirectories = (ArrayList<Directory>[]) new ArrayList[UserInterfaceFrame.LATEST_MC_VERSION + 1];
-    private final ArrayList<Texture>[] textures = (ArrayList<Texture>[]) new ArrayList[UserInterfaceFrame.LATEST_MC_VERSION + 1];
+    private final ArrayList<Directory>[] subDirectories = (ArrayList<Directory>[]) new ArrayList[Globals.LATEST_MC_VERSION + 1];
+    private final ArrayList<Texture>[] textures = (ArrayList<Texture>[]) new ArrayList[Globals.LATEST_MC_VERSION + 1];
 
     public Directory() {
         for (int i = 0; i < subDirectories.length; i++) {

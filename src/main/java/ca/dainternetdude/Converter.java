@@ -1,3 +1,7 @@
+package ca.dainternetdude;
+
+import ca.dainternetdude.filetypes.*;
+import ca.dainternetdude.mappings.*;
 import org.jetbrains.annotations.*;
 
 import java.io.File;
@@ -23,24 +27,24 @@ public class Converter {
     }
     
     public void setSourceVersion(int sv) {
-        if (sv < UserInterfaceFrame.LOWEST_SUPPORTED_MC_VERSION || sv > UserInterfaceFrame.LATEST_MC_VERSION)
+        if (sv < Globals.LOWEST_SUPPORTED_MC_VERSION || sv > Globals.LATEST_MC_VERSION)
             throw new RuntimeException("Source version " + sv + " is out of bounds!");
         else
             sourceVersion = sv;
     }
     
     public void setDestinationVersion(int dv) {
-        if (dv < UserInterfaceFrame.LOWEST_SUPPORTED_MC_VERSION || dv > UserInterfaceFrame.LATEST_MC_VERSION)
+        if (dv < Globals.LOWEST_SUPPORTED_MC_VERSION || dv > Globals.LATEST_MC_VERSION)
             throw new RuntimeException("Destination version " + dv + " is out of bounds!");
         else
             destinationVersion = dv;
     }
 
-    public void convert() { //todo take path to file
+    public void convert() {
         
         //todo setting up source & dest dirs
         
-        for (Directory dir : Version.TOP_LEVEL_DIRECTORIES) {
+        for (Directory dir : Bindings.TOP_LEVEL_DIRECTORIES) {
             convert(dir);
         }
     }

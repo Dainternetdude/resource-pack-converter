@@ -1,15 +1,18 @@
-public class One13 extends One12 {
+package ca.dainternetdude.mappings;
+
+import static ca.dainternetdude.mappings.Bindings.*;
+
+public class One13 {
 	
-	public int version = 13;
+	public static int version = 13;
 	
-	public One13() {
+	public static void setup() {
 		setupTextures();
-		this.setupDirectoryStructure();
+		setupDirectoryStructure();
 		setupDirectoryContents();
 	}
 	
-	protected void setupTextures() {
-		super.setupTextures();
+	private static void setupTextures() {
 		
 		// changed/added block:
 		ACACIA_DOOR_BOTTOM.setName("acacia_door_bottom", version);
@@ -586,8 +589,7 @@ public class One13 extends One12 {
 		ARMOR_TURTLE_LAYER_1.setName("turtle_layer_1", version);
 	}
 	
-	protected void setupDirectoryStructure() {
-		super.setupDirectoryStructure();
+	private static void setupDirectoryStructure() {
 		
 		// setting names
 		DIR_BLOCKS.setName("block", version);
@@ -692,7 +694,7 @@ public class One13 extends One12 {
 		DIR_GUIS.addSubDirectory(DIR_GUIS_TITLE, version);
 	}
 	
-	protected void setupDirectoryContents() {
+	private static void setupDirectoryContents() {
 		
 		DIR_BLOCKS.addTexture(ACACIA_DOOR_BOTTOM, version);
 		DIR_BLOCKS.addTexture(ACACIA_DOOR_TOP, version);

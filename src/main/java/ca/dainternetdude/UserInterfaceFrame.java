@@ -1,7 +1,9 @@
+package ca.dainternetdude;
+
+import ca.dainternetdude.mappings.*;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.File;
 
 /**
  * this class basically is just the literal user interface and it also contains the starting point for the converter
@@ -11,9 +13,7 @@ public class UserInterfaceFrame extends JFrame {
 
     public static final int WIDTH_FRAME = 400;
     public static final int HEIGHT_FRAME = 400;
-    public static final int LATEST_MC_VERSION = 17;
-    public static final int LOWEST_SUPPORTED_MC_VERSION = 7;
-
+    
     private final JPanel panel = new JPanel();
     private final BorderLayout borderLayout = new BorderLayout();
     private final JPanel leftPanel = new JPanel();
@@ -33,53 +33,52 @@ public class UserInterfaceFrame extends JFrame {
         rightPanel.setLayout(rightGbl);
         gbc.insets = new Insets(5, 20, 5, 20);
 
-        JLabel label1 = new JLabel("Source Version");
+        JLabel sourceVersionLabel = new JLabel("Source Version");
         gbc.gridx = 0;
         gbc.gridy = 0;
-        leftPanel.add(label1, gbc);
+        leftPanel.add(sourceVersionLabel, gbc);
 
-        JLabel label2 = new JLabel("Destination Version");
-        rightPanel.add(label2, gbc);
+        JLabel destinationVersionLabel = new JLabel("Destination Version");
+        rightPanel.add(destinationVersionLabel, gbc);
 
         JComboBox<String> sourceVersionComboBox = new JComboBox<>();
         sourceVersionComboBox.addActionListener(e -> {
-            converter.setSourceVersion(LATEST_MC_VERSION - sourceVersionComboBox.getSelectedIndex());
+            converter.setSourceVersion(Globals.LATEST_MC_VERSION - sourceVersionComboBox.getSelectedIndex());
         });
         JComboBox<String> destinationVersionComboBox = new JComboBox<>();
         destinationVersionComboBox.addActionListener(e -> {
-            converter.setDestinationVersion(LATEST_MC_VERSION - destinationVersionComboBox.getSelectedIndex());
+            converter.setDestinationVersion(Globals.LATEST_MC_VERSION - destinationVersionComboBox.getSelectedIndex());
         });
-        String[] versions = new String[LATEST_MC_VERSION + 1];
-
-        for(int i = LATEST_MC_VERSION; i >= LOWEST_SUPPORTED_MC_VERSION; i--) {
+        String[] versions = new String[Globals.LATEST_MC_VERSION + 1];
+        for(int i = Globals.LATEST_MC_VERSION; i >= Globals.LOWEST_SUPPORTED_MC_VERSION; i--) {
             versions[i] = "1." + i;
             sourceVersionComboBox.addItem(versions[i]);
             destinationVersionComboBox.addItem(versions[i]);
         }
         sourceVersionComboBox.setSelectedIndex(1);  //default the source version to previous version
-                                        //destination defaults to current version automatically
+                                                    //destination defaults to current version automatically
         gbc.gridy = 1;
         leftPanel.add(sourceVersionComboBox, gbc);
         rightPanel.add(destinationVersionComboBox, gbc);
 
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        JButton button1 = new JButton("Choose Folder");
-        button1.addActionListener(e -> {
-            if (e.getSource() == button1) {
-                int returnValue = fileChooser.showOpenDialog(button1);
+        JFileChooser sourceFileChooser = new JFileChooser();
+        sourceFileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        JButton chooseSourceFolderButton = new JButton("Choose Folder");
+        chooseSourceFolderButton.addActionListener(e -> {
+            if (e.getSource() == chooseSourceFolderButton) {
+                int returnValue = sourceFileChooser.showOpenDialog(chooseSourceFolderButton);
                 if(returnValue == JFileChooser.APPROVE_OPTION) {
-                    converter.setSourceFile(fileChooser.getSelectedFile());
+                    converter.setSourceFile(sourceFileChooser.getSelectedFile());
                 }
             }
         });
         gbc.gridy = 2;
-        leftPanel.add(button1, gbc);
+        leftPanel.add(chooseSourceFolderButton, gbc);
 
         JButton convertButton = new JButton("Convert!");
         this.add(convertButton, BorderLayout.SOUTH);
         convertButton.addActionListener(e -> {
-            Version.setupVersions();
+            Bindings.setupVersions();
             converter.convert();
         });
 

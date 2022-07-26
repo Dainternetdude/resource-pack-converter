@@ -1,5 +1,9 @@
+package ca.dainternetdude.filetypes;
+
+import ca.dainternetdude.*;
+
 /**
- * parent of Directory & Texture
+ * parent of filetypes.Directory & filetypes.Texture
  */
 public class File {
 
@@ -8,8 +12,8 @@ public class File {
     the goal is to make it very easy to add new versions
      */
 
-    private final String[] name = new String[UserInterfaceFrame.LATEST_MC_VERSION + 1];
-    private final Directory[] parent = new Directory[UserInterfaceFrame.LATEST_MC_VERSION + 1];
+    private final String[] name = new String[Globals.LATEST_MC_VERSION + 1];
+    private final Directory[] parent = new Directory[Globals.LATEST_MC_VERSION + 1];
 
     public File() {
     }
@@ -26,7 +30,7 @@ public class File {
         if (this.getParent(version) != null) {
             return getParent(version).getPath(version) + this.getName(version);
         } else {
-            return Version.BASE_PATH + this.getName(version);
+            return Globals.BASE_PATH + this.getName(version);
         }
     }
 

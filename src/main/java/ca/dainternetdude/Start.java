@@ -1,3 +1,5 @@
+package ca.dainternetdude;
+
 /**
  * @author Dainternetdude
  */
