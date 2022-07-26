@@ -55,8 +55,9 @@ public class UserInterfaceFrame extends JFrame {
             sourceVersionComboBox.addItem(versions[i]);
             destinationVersionComboBox.addItem(versions[i]);
         }
-        sourceVersionComboBox.setSelectedIndex(1);  //default the source version to previous version
-                                                    //destination defaults to current version automatically
+        sourceVersionComboBox.setSelectedIndex(1);                      //default the source version to previous version
+        converter.setSourceVersion(Globals.LATEST_MC_VERSION - 1);
+        converter.setDestinationVersion(Globals.LATEST_MC_VERSION);     //destination defaults to current version automatically
         gbc.gridy = 1;
         leftPanel.add(sourceVersionComboBox, gbc);
         rightPanel.add(destinationVersionComboBox, gbc);

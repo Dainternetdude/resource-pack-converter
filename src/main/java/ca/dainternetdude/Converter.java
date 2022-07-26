@@ -4,7 +4,9 @@ import ca.dainternetdude.filetypes.*;
 import ca.dainternetdude.mappings.*;
 import org.jetbrains.annotations.*;
 
+import java.io.*;
 import java.io.File;
+import java.nio.file.*;
 import java.util.*;
 
 /**
@@ -12,10 +14,10 @@ import java.util.*;
  */
 public class Converter {
 
-    private int sourceVersion;
-    private int destinationVersion;
+    private int sourceVersion = -1;
+    private int destinationVersion = -1;
     private File sourceFile;
-    //public static final basePath
+    private File destinationFile;
     
     public void setSourceFile(File sf) {
         if (sf == null)
@@ -42,10 +44,32 @@ public class Converter {
 
     public void convert() {
         
-        //todo setting up source & dest dirs
+        if (sourceVersion == -1) {
+            throw new RuntimeException("Error: No source version selected!");
+        } else if (destinationVersion == -1) {
+            throw new RuntimeException("Error: No destination version selected!");
+        } else if (sourceFile == null) {
+            throw new RuntimeException("Error: No source file selected!");
+        }
+        
+        String path = sourceFile.getPath();
+        String[] splitPath = path.split("/");
+        var len = splitPath.length;
+        var c = splitPath[len - 1].length();
+        String sourceFileName = path.substring(path.length() - c);
+        String destinationFilePath = path + " 1." + destinationVersion;
+    
+        System.out.println("Source path:      " + path);
+        System.out.println("Destination path: " + destinationFilePath);
+        
+        destinationFile = new File(destinationFilePath);
+        
+        if (destinationFile.mkdir()) {
+            System.out.println("Destination directory successfully created!");
+        }
         
         for (Directory dir : Bindings.TOP_LEVEL_DIRECTORIES) {
-            convert(dir);
+            //convert(dir);
         }
     }
     private void convert(@NotNull Directory dir) {
